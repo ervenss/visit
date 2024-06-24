@@ -1,0 +1,79 @@
+/* переменные */
+:root {
+  --color-green: #76bc21;
+  --background-black-opacity: rgba(27, 7, 66, 0.907);
+}
+
+/* общие стили */
+a {
+  color: var(--color-green);
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+a:hover {
+  opacity: 0.7;
+}
+/* header стили */
+.header {
+  height: 110vh;
+  background: url("/comp.jpeg") no-repeat center; /* блокировка повторения изображения */
+
+  background-size: cover; /* растягивание картинки по размерам блока */
+  clip-path: polygon(100% 0, 100% 85%, 49% 100%, 0 84%, 0 0);
+}
+
+.header-top {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80px;
+  background: var(--background-black-opacity);
+}
+.header-top a {
+  color: white;
+}
+.header-top a.active {
+  color: var(--color-green);
+}
+.logo {
+  font-size: 36px;
+  color: white;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-element {
+  margin-right: 10px;
+  font-size: 22px;
+}
+.menu-element:last-child {
+  margin-right: 0;
+}
+.header-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+
+  color: #fff;
+}
+.name {
+  font-size: 58px;
+  line-height: 74px;
+}
+
+.header-center__wrapper {
+  background-color: var(--background-black-opacity);
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.description {
+  font-size: 22px;
+}
