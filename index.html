@@ -10,6 +10,7 @@
   </head>
   <body>
     <header class="header">
+      <div class="header__background"></div>
       <div class="header-top">
         <a href="" class="logo">Наталья&nbsp; Курилина</a>
         <nav class="navigation">
@@ -40,7 +41,13 @@
             </li>
           </ul>
         </nav>
-        <div class="switcher">Ru/Eng</div>
+        <div class="switcher-wrapper">
+          <input type="checkbox" id="lang" checked />
+          <label class="switcher" for="lang">
+            <span>RUS</span>
+            <span>ENG</span>
+          </label>
+        </div>
       </div>
 
       <div class="header-center">

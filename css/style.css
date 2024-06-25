@@ -20,6 +20,14 @@ a:hover {
 
   background-size: cover; /* растягивание картинки по размерам блока */
   clip-path: polygon(100% 0, 100% 85%, 49% 100%, 0 84%, 0 0);
+  position: relative;
+}
+.header__background {
+  height: inherit;
+  position: absolute;
+  width: 100%;
+  background: rgba(54, 18, 121, 0.712);
+  z-index: 1;
 }
 
 .header-top {
@@ -29,6 +37,8 @@ a:hover {
   justify-content: space-evenly;
   height: 80px;
   background: var(--background-black-opacity);
+  position: relative;
+  z-index: 2;
 }
 .header-top a {
   color: white;
@@ -53,12 +63,69 @@ a:hover {
 .menu-element:last-child {
   margin-right: 0;
 }
+
+.switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  background: var(--color-green);
+  border-radius: 20px;
+  width: 100px;
+  padding: 0 10px;
+  opacity: 0.9;
+  transition: opacity 0.025s ease;
+  font-size: 14px;
+  cursor: pointer;
+}
+.switcher:hover {
+  opacity: 1;
+}
+.switcher:before {
+  content: "";
+  width: 50px;
+  height: 30px;
+  background: #fff;
+  position: absolute;
+  z-index: 1;
+  border-radius: 20px;
+  left: 47px;
+
+  transition: left 0.25s ease-in-out;
+}
+#lang:checked + .switcher:before {
+  left: 3px;
+}
+#lang:checked + .switcher span:first-child {
+  color: var(--color-green);
+}
+#lang:checked + .switcher span:last-child {
+  color: #fff;
+}
+/* разделили кнопку на две части */
+.switcher span {
+  flex: 1 1 50%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  color: var(--color-green);
+  transition: color 0.25s ease-in-out;
+}
+.switcher span:first-child {
+  color: #fff;
+}
+
+#lang {
+  display: none;
+}
 .header-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: calc(100vh - 80px);
+  position: relative;
+  z-index: 2;
 
   color: #fff;
 }
