@@ -16,6 +16,7 @@ a.link:hover {
 .block-center {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 /* header стили */
@@ -189,6 +190,7 @@ a.link:hover {
 .about-me {
   display: flex;
   align-items: center;
+  padding-bottom: 60px;
 }
 
 .about-me .left {
@@ -323,4 +325,54 @@ ul.about-me__exstra {
 
 .interest-text:last-of-type {
   margin-bottom: 0;
+}
+
+/* секция достижения */
+.section-gray {
+  background: #e1e1e1;
+}
+
+.achievements {
+  flex-direction: column;
+  position: relative;
+  padding: 40px 0;
+}
+
+.achievements:before,
+.achievements:after {
+  content: "";
+  position: absolute;
+  border: 80px solid transparent;
+}
+
+.achievements:before {
+  border-top: 30px solid #fff;
+  top: 0;
+}
+.achievements:after {
+  border-top: 30px solid #e1e1e1;
+  bottom: -109px;
+}
+
+.achievements-list {
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+}
+.achievements-list__view {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+}
+.achievements-list__image {
+  width: 100%;
+  max-width: 250px;
+}
+.achievements-list__element {
+  flex: 1 1 33%;
+}
+/* секция навыки */
+.skills {
+  padding: 60px 0 40px;
 }
