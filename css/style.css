@@ -5,22 +5,28 @@
 }
 
 /* общие стили */
-a {
+a.link {
   color: var(--color-green);
   text-decoration: none;
   transition: opacity 0.25s ease;
 }
-a:hover {
+a.link:hover {
   opacity: 0.7;
 }
+.block-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* header стили */
 .header {
   height: 110vh;
-  background: url("/comp.jpeg") no-repeat center; /* блокировка повторения изображения */
-
-  background-size: cover; /* растягивание картинки по размерам блока */
+  background: url("/comp.jpeg") no-repeat center;
+  background-size: cover;
   clip-path: polygon(100% 0, 100% 85%, 49% 100%, 0 84%, 0 0);
   position: relative;
+  bottom: 100px;
 }
 .header__background {
   height: inherit;
@@ -35,33 +41,34 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 80px;
-  background: var(--background-black-opacity);
-  position: relative;
-  z-index: 2;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.5); /* Уменьшение непрозрачности фона */
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
-.header-top a {
+.header-top a.link {
   color: white;
+  position: relative; /* Добавлено для наложения над фоном */
+  z-index: 3; /* Убедитесь, что текст выше фона */
 }
-.header-top a.active {
-  color: var(--color-green);
-}
+
 .logo {
-  font-size: 36px;
+  font-size: 32px;
   color: white;
-}
-.menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 260px;
 }
 
 .menu-element {
-  margin-right: 10px;
+  margin-right: 25px;
   font-size: 22px;
 }
 .menu-element:last-child {
   margin-right: 0;
+}
+.menu-element a.link.active,
+.menu-element a.link:hover {
+  color: #8cff00;
 }
 
 .switcher {
@@ -78,6 +85,9 @@ a:hover {
   font-size: 14px;
   cursor: pointer;
 }
+.switcher-container {
+  width: 260px;
+}
 .switcher:hover {
   opacity: 1;
 }
@@ -90,7 +100,6 @@ a:hover {
   z-index: 1;
   border-radius: 20px;
   left: 47px;
-
   transition: left 0.25s ease-in-out;
 }
 #lang:checked + .switcher:before {
@@ -123,10 +132,9 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 80px);
+  height: calc(100vh - (-40px));
   position: relative;
   z-index: 2;
-
   color: #fff;
 }
 .name {
@@ -140,7 +148,40 @@ a:hover {
   text-align: center;
   padding: 20px 0;
 }
+.menu-element__link.home svg {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
 
 .description {
   font-size: 22px;
+  font-family: "Courier New", Courier, monospace;
+  width: 990px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid transparent;
+  display: inline-block;
+  animation: cursor 0.75s 7, print-text 4s steps(300);
+  line-height: 1.2; /* Высота линии */
+  height: 1.2em; /* Высота элемента */
+}
+@keyframes cursor {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+    border-right-width: 2px; /* Толщина курсора */
+    border-right-style: solid;
+    height: 1.2em; /* Высота курсора */
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+@keyframes print-text {
+  from {
+    width: 0;
+  }
 }
