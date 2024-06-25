@@ -257,7 +257,7 @@ ul.about-me__exstra {
 
 /* секция интересы */
 .interests {
-  padding: 40px 20px;
+  padding: 40px 180px;
 }
 
 .second-tittle {
@@ -291,11 +291,23 @@ ul.about-me__exstra {
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: justify;
 }
 
+/* Фиксируем высоту изображения */
 .interest-image {
-  width: 200px;
+  width: 270px;
+  height: 300px; /* Устанавливаем фиксированную высоту */
   margin-bottom: 20px;
+  object-fit: cover; /* Чтобы изображение корректно вписывалось в заданные размеры */
+}
+
+/* Устанавливаем, что текстовый контейнер должен занимать оставшееся пространство */
+.interest-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .interest-title {
