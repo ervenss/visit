@@ -206,48 +206,83 @@
     <!-- секция достижения -->
     <section class="achievements section-gray block-center" id="achievements">
       <h2 class="second-tittle">Достижения</h2>
-      <ul class="achievements-list slider__wrapper">
-        <li class="achievements-list__view slider__wrapper">
-          <a href="" class="achievements-list__element block-center">
+      <div class="achievements-list slider">
+        <input
+          class="slider__input"
+          type="radio"
+          name="slider_achievements"
+          id="slider-achievements-1"
+        />
+        <input
+          class="slider__input"
+          type="radio"
+          name="slider_achievements"
+          id="slider-achievements-2"
+        />
+
+        <div class="achievements-list__view slider__wrapper">
+          <a
+            href=""
+            class="achievements-list__element slider__link block-center"
+          >
             <img
-              class="achievements-list__image"
+              class="achievements-list__image slider__image"
               src="/achivments/ser1.jpg"
               alt="sertif"
           /></a>
-          <a href="" class="achievements-list__element block-center">
+          <a
+            href=""
+            class="achievements-list__element slider__link block-center"
+          >
             <img
-              class="achievements-list__image"
+              class="achievements-list__image slider__image"
               src="/achivments/ser2.jpg"
               alt="sertif2"
           /></a>
-          <a href="" class="achievements-list__element block-center"
+          <a
+            href=""
+            class="achievements-list__element slider__link block-center"
             ><img
-              class="achievements-list__image"
+              class="achievements-list__image slider__image"
               src="/achivments/ser3.jpg"
               alt="sertif3"
           /></a>
-        </li>
-        <li class="achievements-list__view slider__wrapper">
+        </div>
+        <div class="achievements-list__view slider__wrapper">
           <a
-            href="/achivments/diplom.jpg"
-            class="achi block-center evements-list__element"
+            href=""
+            class="achievements-list__element slider__link block-center"
             ><img
-              class="achievements-list__image"
+              class="achievements-list__image slider__image"
               src="/achivments/diplom.jpg"
               alt="diplom" /></a
-          ><a href="" class="achievements-list__elemen block-center t"
+          ><a
+            href=""
+            class="achievements-list__element slider__link block-center"
             ><img
-              class="achievements-list__image"
+              class="achievements-list__image slider__image"
               src="/achivments/ser3.jpg"
               alt="sertif6" /></a
-          ><a href="" class="achievements-list__elemen block-center t"
+          ><a
+            href=""
+            class="achievements-list__elemen slider__link block-center"
             ><img
-              class="achievements-list__image"
+              class="achievements-list__image slider__image"
               src="/achivments/ser2.jpg"
               alt="sertif5"
           /></a>
-        </li>
-      </ul>
+        </div>
+      </div>
+      <div class="slider__controls">
+        <label
+          for="slider-achievements-1"
+          class="slider__controls-element"
+        ></label>
+        <label
+          for="slider-achievements-2"
+          class="slider__controls-element"
+        ></label>
+      </div>
     </section>
     <!-- секция навыки -->
     <section class="skills" id="skills">
@@ -256,12 +291,12 @@
         Все оценки являются субъективными и показывают уровень, который, как по
         мне, необходим для работы.
       </p>
-      <ul class="skills-filters">
-        <li class="skills-filters">Все</li>
-        <li class="skills-filters">Html/css</li>
-        <li class="skills-filters">Js</li>
-        <li class="skills-filters">React</li>
-        <li class="skills-filters">Database</li>
+      <ul class="skills-filters block-center">
+        <li role="button" class="skills-filter active">Все</li>
+        <li role="button" class="skills-filter">Html/css</li>
+        <li role="button" class="skills-filter">Js</li>
+        <li role="button" class="skills-filter">React</li>
+        <li role="button" class="skills-filter">Database</li>
       </ul>
       <!-- в предыдущий раз было разделение на всю секцию , а здесь мы разделяем уже внутри секции с каким-то контентом -->
       <div class="skills-wrapper">
@@ -479,19 +514,75 @@
       </div>
     </section>
     <!-- секция книги -->
-    <section class="books" id="books">
+    <section class="books section-gray block-center" id="books">
       <h2 class="second-tittle">Прочитанные книги</h2>
       <p class="section-description">
         Тут указаны не все прочитанные мной книги, а только те книги, которые
         произвели на меня наибольшее впечатление
       </p>
-      <ul class="books-list">
-        <li class="books-list__element">Книга 1</li>
-        <li class="books-list__element">Книга 2</li>
-        <li class="books-list__element">Книга 3</li>
-        <li class="books-list__element">Книга 4</li>
-        <li class="books-list__element">Книга 5</li>
-      </ul>
+      <div class="book-list slider">
+        <input
+          class="slider__input"
+          type="radio"
+          name="slider_achievements"
+          id="slider-book-1"
+        />
+        <input
+          class="slider__input"
+          type="radio"
+          name="slider_achievements"
+          id="slider-book-2"
+        />
+        <input
+          class="slider__input"
+          type="radio"
+          name="slider_achievements"
+          id="slider-book-3"
+        />
+        <div class="slider__wrapper">
+          <a href="" class="slider__link block-center">
+            <img class="slider__img" src="/books/book1.jpg" alt="Анна Джейн"
+          /></a>
+          <a href="" class="slider__link block-center">
+            <img class="slider__img" src="/books/book2.jpg" alt="Поклонник"
+          /></a>
+          <a href="" class="slider__link block-center"
+            ><img class="slider__img" src="/books/book3.jpg" alt="Сеть смерти"
+          /></a>
+        </div>
+        <div class="slider__wrapper">
+          <a href="" class="slider__link block-center"
+            ><img
+              class="slider__img"
+              src="/books/book4.jpg"
+              alt="Майк Омер" /></a
+          ><a href="" class="slider__link block-center"
+            ><img
+              class="slider__img"
+              src="/books/book5.jpg"
+              alt="Хрупкое равновесие" /></a
+          ><a href="" class="slider__link block-center"
+            ><img class="slider__img" src="/books/book6.jpg" alt="Эмма Скотт"
+          /></a>
+        </div>
+        <div class="slider__wrapper">
+          <a href="" class="slider__link block-center"
+            ><img
+              class="slider__img"
+              src="books/book7.jpg"
+              alt="пять минут" /></a
+          ><a href="" class="slider__link block-center"
+            ><img class="slider__img" src="/books/book8.jpg" alt="ни сы" /></a
+          ><a href="" class="slider__link block-center"
+            ><img class="slider__img" src="/books/book9.jpg" alt="шах и мат"
+          /></a>
+        </div>
+      </div>
+      <div class="slider__controls">
+        <label for="slider-book-1" class="slider__controls-element"></label>
+        <label for="slider-book-2" class="slider__controls-element"></label>
+        <label for="slider-book-3" class="slider__controls-element"></label>
+      </div>
     </section>
     <!-- секция обратная связь -->
     <section class="contact-me" id="contact-me">

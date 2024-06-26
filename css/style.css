@@ -353,26 +353,127 @@ ul.about-me__exstra {
   border-top: 30px solid #e1e1e1;
   bottom: -109px;
 }
-
-.achievements-list {
+/* слайдер */
+.slider {
+  position: relative;
   display: flex;
   max-width: 100%;
   overflow: hidden;
 }
-.achievements-list__view {
+.slider__wrapper {
   flex: 1 1 100%;
   display: flex;
   justify-content: space-between;
   min-width: 100%;
+  transition: all 0.5s ease;
 }
-.achievements-list__image {
+.slider__image {
   width: 100%;
   max-width: 250px;
 }
-.achievements-list__element {
+.slider__img {
+  width: 70%px;
+  max-width: 200px;
+}
+.slider__link {
   flex: 1 1 33%;
 }
 /* секция навыки */
 .skills {
   padding: 60px 0 40px;
 }
+.skills-filters {
+  gap: 20px;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.skills-filter {
+  cursor: pointer;
+  list-style-type: none;
+  transition: color 0.25s ease;
+}
+.skills-filter:hover {
+  color: var(--color-green);
+}
+.skills-wrapper {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+.skills-wrapper .left {
+  flex: 1 1 70%;
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.skills-wrapper .right {
+  flex: 1 1 30%;
+}
+.skills-list__element {
+  flex: 1 1 30%;
+  max-width: 30%;
+}
+/*  */
+
+.slider__input {
+  display: none;
+}
+
+.slider__controls {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.slider__controls-element {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  background: grey;
+  cursor: pointer;
+  transition: opacity 0.25s ease;
+}
+.slider__controls-element:hover {
+  opacity: 0.8;
+  border-color: rgb(0 0 0/50%);
+  background: var(--color-green);
+}
+
+.slider__input:first-of-type:checked ~ .slider__wrapper:first-of-type {
+  margin-left: 0;
+}
+.slider__input:nth-of-type(2):checked ~ .slider__wrapper:first-of-type {
+  margin-left: -100%;
+}
+.slider__input:nth-of-type(3):checked ~ .slider__wrapper:first-of-type {
+  margin-left: -200%;
+}
+.slider__input:nth-of-type(4):checked ~ .slider__wrapper:first-of-type {
+  margin-left: -300%;
+}
+.slider__input:nth-of-type(5):checked ~ .slider__wrapper:first-of-type {
+  margin-left: -400%;
+}
+
+/* секция книги */
+.books {
+  padding: 20px 0 80px;
+  flex-direction: column;
+  position: relative;
+}
+.section-description {
+  margin-bottom: 40px;
+  font-size: 18px;
+  text-align: center;
+}
+.active {
+  color: var(--color-green);
+}
+/* обратная связь */
