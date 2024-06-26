@@ -1454,14 +1454,14 @@
       </div>
     </section>
     <!-- секция работа -->
-    <section class="work" id="work">
+    <section class="work section-gray" id="work">
       <h2 class="second-tittle">Работа</h2>
-      <div class="work-wrapper">
-        <div class="work-element left">
+      <div class="work-wrapper block-center">
+        <div class="work-element work-element__animation left" data-year="2019">
           <div class="work-element__content">
-            <p class="work-element__tittle">Раздача листовок</p>
+            <p class="work-element__tittle bold">Раздача листовок</p>
             <p class="work-element__description">декабрь 2019 - май 2019</p>
-            <p class="work-element__block-tittle">Навыки</p>
+            <p class="work-element__block-tittle bold">Навыки</p>
             <ul class="work-element__skills">
               <li class="work-element__skills-element">Коммуникабельность</li>
               <li class="work-element__skills-element">Стрессоустойчивость</li>
@@ -1469,14 +1469,15 @@
               <li class="work-element__skills-element">Внимательность</li>
             </ul>
           </div>
-
-          <div class="work-element__date">2019</div>
         </div>
-        <div class="work-element right">
+        <div
+          class="work-element work-element__animation right"
+          data-year="2021"
+        >
           <div class="work-element__content">
-            <p class="work-element__tittle">Официантка</p>
+            <p class="work-element__tittle bold">Официантка</p>
             <p class="work-element__description">август 2021 - сентябрь 2021</p>
-            <p class="work-element__block-tittle">Навыки</p>
+            <p class="work-element__block-tittle bold">Навыки</p>
             <ul class="work-element__skills">
               <li class="work-element__skills-element">Доброжелательность</li>
               <li class="work-element__skills-element">Стрессоустойчивость</li>
@@ -1484,13 +1485,12 @@
               <li class="work-element__skills-element">Аккуратность</li>
             </ul>
           </div>
-          <div class="work-element__date">2021</div>
         </div>
-        <div class="work-element left">
+        <div class="work-element work-element__animation left" data-year="2023">
           <div class="work-element__content">
-            <p class="work-element__tittle">Сайт на заказ</p>
+            <p class="work-element__tittle bold">Сайт на заказ</p>
             <p class="work-element__description">май 2023-июль 2023</p>
-            <p class="work-element__projects">Проект</p>
+            <p class="work-element__block-tittle bold">Проект</p>
             <ul class="work-element__projects">
               <li class="work-element__projects-element work-project">
                 <span class="work-project__tittle">Сайт Bruskoff</span>
@@ -1503,7 +1503,7 @@
               </li>
             </ul>
 
-            <p class="work-element__block-tittle">Навыки</p>
+            <p class="work-element__block-tittle bold">Навыки</p>
             <ul class="work-element__skills">
               <li class="work-element__skills-element">html</li>
               <li class="work-element__skills-element">bootstrap</li>
@@ -1512,21 +1512,29 @@
               <li class="work-element__skills-element">seo</li>
             </ul>
           </div>
-          <div class="work-element__date">2023</div>
         </div>
-        <div class="work-element right">
+        <div
+          class="work-element work-element__animation right"
+          data-year="2024"
+        >
           <div class="work-element__content">
-            <p class="work-element__tittle">Курсовой проект</p>
+            <p class="work-element__tittle bold">Курсовой проект</p>
             <p class="work-element__description">февраль 2024 - май 2024</p>
 
-            <p class="work-element__projects">Проект</p>
+            <p class="work-element__block-tittle bold">Проект</p>
             <ul class="work-element__projects">
               <li class="work-element__projects-element work-project">
                 <span class="work-project__tittle">Сайт Trening</span>
+                <div class="work-tooltip">
+                  <p class="work-project__description">
+                    Вёрстка, поддержка и раскрутка сайта bruskoff.ru (сейчас
+                    недоступен)
+                  </p>
+                </div>
               </li>
             </ul>
 
-            <p class="work-element__block-tittle">Навыки</p>
+            <p class="work-element__block-tittle bold">Навыки</p>
             <ul class="work-element__skills">
               <li class="work-element__skills-element">react</li>
               <li class="work-element__skills-element">js</li>
@@ -1537,7 +1545,6 @@
               <li class="work-element__skills-element">html</li>
             </ul>
           </div>
-          <div class="work-element__date">2024</div>
         </div>
       </div>
     </section>
@@ -1719,16 +1726,17 @@
       <h2 class="second-tittle">Обратная связь</h2>
       <form action="" class="contact-me__form">
         <!-- для каждого поля ввода есть какой-то заголовок он называется лейбл, само поле ввода это инпут -->
-        <div class="input-wrapper">
-          <label for="name" class="label">Имя</label>
+        <div class="input-wrapper left">
+          <label for="name" class="label bold">Имя</label>
           <input class="input" type="text" id="name" required />
         </div>
-        <div class="input-wrapper">
-          <label for="email" class="label">E-mail</label>
+        <div class="input-wrapper right">
+          <label for="email" class="label bold">E-mail</label>
           <input class="input" type="email" id="email" required />
         </div>
+        <div class="cls"></div>
         <div class="textarea-wrapper">
-          <label for="message" class="label">Сообщение</label>
+          <label for="message" class="label bold">Сообщение</label>
           <textarea
             class="textarea"
             name="message"
@@ -1738,7 +1746,7 @@
             required
           >
           </textarea>
-          <button type="submit" class="submit">Отправить сообщение</button>
+          <button type="submit" class="submit">Отправить</button>
         </div>
       </form>
     </section>
