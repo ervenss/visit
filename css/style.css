@@ -377,6 +377,7 @@ ul.about-me__exstra {
   display: flex;
   max-width: 100%;
   overflow: hidden;
+  padding-bottom: 50px;
 }
 .slider__wrapper {
   flex: 1 1 100%;
@@ -515,12 +516,28 @@ ul.about-me__exstra {
 }
 
 .slider__controls {
+  width: 100%;
   position: absolute;
-  bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  bottom: 0;
+
   gap: 20px;
+}
+.slider__input:first-of-type:checked
+  ~ .slider__controls
+  .slider__controls-element:first-of-type,
+.slider__input:first-of-type:checked
+  ~ .slider__controls
+  .slider__controls-element:first-of-type(2),
+.slider__input:first-of-type:checked
+  ~ .slider__controls
+  .slider__controls-element:first-of-type(3),
+.slider__input:first-of-type:checked
+  ~ .slider__controls
+  .slider__controls-element:first-of-type(4),
+.slider__input:first-of-type:checked
+  ~ .slider__controls
+  .slider__controls-element:first-of-type(5) {
+  background: var(--color-green);
 }
 
 .slider__controls-element {
