@@ -151,7 +151,7 @@
   }
 
   .interest-image {
-      width: 150px;
+      width: 300px;
   }
 
   .interest-title {
@@ -200,7 +200,7 @@
   .menu-hamburger {
       position: fixed;
       top: 20px;
-      right: 30px;
+      right: 110px;
 
       display: flex;
       flex-direction: column;
@@ -239,6 +239,8 @@
 
   #hamburger:checked ~ .header-top {
       transform: translateX(0);
+      margin-right: 60px;
+      
   }
 
   #hamburger:checked ~ .menu-hamburger .line1 {
@@ -254,12 +256,12 @@
   }
 
   .header-top {
-      position: fixed;
+      position: fixed !important;
       right: 0;
-
+    
       flex-direction: column;
       width: 50%;
-      height: 100vh;
+      height: 110vh;
 
       background: #000;
       transform: translateX(100%);
@@ -268,7 +270,7 @@
 
   .logo {
       display: block;
-      width: 100%;
+      width: 50%;
       text-align: center;
       white-space: normal;
   }
@@ -288,8 +290,8 @@
   }
 
   .menu-element__link.home svg {
-      width: 24px;
-      height: 24px;
+      min-width: 24px;
+      min-height: 24px;
   }
 
   .switcher-container {
@@ -330,6 +332,8 @@
 
   .about-me .right {
       padding: 0;
+      margin-left: 150px;
+    
   }
 
   .about-me__extra-icon {
@@ -395,6 +399,7 @@
   /* Интересы */
   .interest-wrapper {
       width: 100%;
+      margin-bottom: 20px;
   }
 
   /* Обратная связь */
@@ -417,4 +422,11 @@
       width: 100%;
       max-width: 100%;
   }
+  .h-5,
+.w-5 {
+  width: 1em; /* или другая единица измерения, соответствующая вашему макету */
+  height: 1em; /* или другая единица измерения, соответствующая вашему макету */
+}
+
+
 }

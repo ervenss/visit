@@ -185,7 +185,7 @@ a.link:hover {
   display: inline-block;
   animation: cursor 0.75s 7, print-text 4s steps(300);
   line-height: 1.2; /* Высота линии */
-  height: 1.2em; /* Высота элемента */
+ 
 }
 @keyframes cursor {
   0% {
@@ -394,7 +394,7 @@ ul.about-me__exstra {
   max-width: 250px;
 }
 .slider__img {
-  width: 70%px;
+  width: 70%;
   max-width: 200px;
 }
 .slider__link {
@@ -927,3 +927,4 @@ ul.about-me__exstra {
 #hamburger, .menu-hamburger {
   display: none;
 }
+
