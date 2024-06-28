@@ -1,0 +1,420 @@
+@media screen and (max-width: 1350px) {
+  .logo {
+      font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* Menu */
+  .logo {
+      font-size: 28px;
+  }
+
+  .menu-element {
+      font-size: 18px;
+      margin-right: 10px;
+  }
+
+  .menu-element__link.home svg {
+      width: 20px;
+      height: 20px;
+  }
+
+  .switcher-container {
+      width: 200px;
+  }
+
+  /* About me */
+  .about-me__image {
+      width: 300px;
+  }
+
+  .about-me__title {
+      font-size: 32px;
+  }
+
+  .about-me__description, ul.about-me__extra {
+      font-size: 18px;
+  }
+
+  /* Обратная связь */
+  .form-result__content {
+      font-size: 18px;
+      max-width: 90%;
+      text-align: center;
+  }
+
+  .contact-me__form {
+      max-width: 95%;
+  }
+
+  /* Общие стили */
+  .slider__image {
+      max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+      /* Work vars */
+      --work-wrapper: 700px;
+      --work-element: 300px;
+  }
+
+  /* Menu */
+  .logo {
+      font-size: 24px;
+  }
+
+  .menu-element {
+      font-size: 16px;
+      margin-right: 5px;
+  }
+
+  .menu-element__link.home svg {
+      width: 18px;
+      height: 18px;
+  }
+
+  /* Header */
+  .name {
+      font-size: 40px;
+      line-height: 54px;
+  }
+
+  .description {
+      width: 615px;
+      font-size: 20px;
+  }
+
+  /* About me */
+  .about-me .left {
+      padding-right: 20px;
+  }
+
+  .about-me__image {
+      width: 250px;
+  }
+
+  .about-me__title {
+      font-size: 24px;
+  }
+
+  .about-me__description, ul.about-me__extra {
+      font-size: 16px;
+  }
+
+  .about-me__extra-icon {
+      width: 20px;
+      height: 20px;
+  }
+
+  /* Skills */
+  .skills-wrapper {
+      width: 90%;
+  }
+
+  .skills-wrapper .left {
+      padding-right: 10px;
+      max-width: 60%;
+      gap: 10px;
+  }
+
+  .skills-list__row {
+      gap: 10px;
+  }
+
+  .skills-list__element {
+      flex: 1 1 32%;
+      max-width: 32%;
+  }
+
+  .skills-list__element > *:first-child {
+      flex: 1 1 30%;
+  }
+  .skills-list__element > *:last-child {
+      font-size: 18px;
+      flex: 1 1 60%;
+  }
+
+  /* интересы */
+  .interests {
+      padding: 40px 10px;
+  }
+
+  .interests__list {
+      gap: 10px;
+  }
+
+  .interest-wrapper {
+      width: 32%;
+  }
+
+  .interest-image {
+      width: 150px;
+  }
+
+  .interest-title {
+      font-size: 18px;
+      text-align: center;
+  }
+
+  /* Общие стили */
+  .section-description {
+      font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  /* Menu */
+  .switcher-container {
+      width: 150px;
+  }
+
+  .switcher-wrapper {
+      width: 100px;
+  }
+
+  .switcher {
+      font-size: 14px;
+  }
+
+  .lang-placeholder {
+      width: 30px;
+      height: 25px;
+  }
+
+  .switcher-wrapper input[type="radio"]:nth-of-type(1):checked ~ .lang-placeholder {
+      left: 8px;
+  }
+  .switcher-wrapper input[type="radio"]:nth-of-type(2):checked ~ .lang-placeholder {
+      left: 35px;
+  }
+  .switcher-wrapper input[type="radio"]:nth-of-type(3):checked ~ .lang-placeholder {
+      left: 63px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Menu */
+  .menu-hamburger {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 26px;
+      width: 32px;
+
+      z-index: 4;
+  }
+
+  .line {
+      display: block;
+      height: 4px;
+      width: 100%;
+      border-radius: 10px;
+      background: var(--color-green);
+  }
+
+  .line1 {
+      transform-origin: 0 0;
+      transition: transform 0.4s ease-in-out;
+  }
+
+  .line2 {
+      transition: transform 0.2s ease-in-out;
+  }
+
+  .line3 {
+      transform-origin: 0 100%;
+      transition: transform 0.4s ease-in-out;
+  }
+
+  #hamburger {
+      display: none;
+  }
+
+  #hamburger:checked ~ .header-top {
+      transform: translateX(0);
+  }
+
+  #hamburger:checked ~ .menu-hamburger .line1 {
+      transform: rotate(45deg);
+  }
+
+  #hamburger:checked ~ .menu-hamburger .line2 {
+      transform: scaleY(0);
+  }
+
+  #hamburger:checked ~ .menu-hamburger .line3 {
+      transform: rotate(-45deg);
+  }
+
+  .header-top {
+      position: fixed;
+      right: 0;
+
+      flex-direction: column;
+      width: 50%;
+      height: 100vh;
+
+      background: #000;
+      transform: translateX(100%);
+      transition: transform .25s ease;
+  }
+
+  .logo {
+      display: block;
+      width: 100%;
+      text-align: center;
+      white-space: normal;
+  }
+
+  .navigation {
+      margin: 20px 0;
+  }
+
+  .menu {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .menu-element {
+      margin-right: 0;
+      font-size: 18px;
+  }
+
+  .menu-element__link.home svg {
+      width: 24px;
+      height: 24px;
+  }
+
+  .switcher-container {
+      width: 100%;
+  }
+
+  /* Header */
+  .header {
+      bottom: 0;
+  }
+
+  .name {
+      font-size: 34px;
+      line-height: 74px;
+  }
+
+  .description {
+      font-size: 18px;
+      width: 90%;
+      white-space: normal;
+      animation: none;
+  }
+
+  .description span {
+      white-space: nowrap;
+  }
+
+  /* About me */
+  .about-me {
+      padding: 40px 10px;
+      flex-direction: column;
+  }
+
+  .about-me .left {
+      padding-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .about-me .right {
+      padding: 0;
+  }
+
+  .about-me__extra-icon {
+      min-width: 24px;
+      min-height: 24px;
+  }
+
+  /* Skills */
+  .skills-wrapper .right {
+      display: none;
+  }
+
+  .skills-wrapper .left {
+      width: 100%;
+      max-width: 100%;
+      padding-right: 0;
+  }
+
+  .skills-list__row {
+      flex-direction: column;
+  }
+
+  .skills-list__element {
+      width: 100%;
+      max-width: 100%;
+  }
+
+  .skills-list__element > *:first-child {
+      max-height: 90%;
+  }
+
+  /* Work */
+  .work-wrapper {
+      width: 95%;
+      top: 0;
+      gap: 80px;
+  }
+
+  .work-element__animation {
+      animation: none;
+  }
+
+  .work-element {
+      width: 100%;
+      bottom: 0 !important;
+      background: #fff;
+  }
+
+  .work-element.left:before,
+  .work-element.right:before {
+      display: none;
+  }
+
+  .work-element.left:after {
+      right: calc(50% - var(--work-year) / 2 + 2px);
+      top: -60px;
+  }
+  .work-element.right:after {
+      left: calc(50% - var(--work-year) / 2 - 2px);
+      top: -60px;
+  }
+
+  /* Интересы */
+  .interest-wrapper {
+      width: 100%;
+  }
+
+  /* Обратная связь */
+  .input-wrapper {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  /* Общие стили */
+  .slider {
+      max-width: 95%;
+  }
+
+  .slider__link {
+      flex: 1 1 31%;
+      max-width: 31%;
+  }
+
+  .slider__image {
+      width: 100%;
+      max-width: 100%;
+  }
+}

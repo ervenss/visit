@@ -75,11 +75,14 @@ a.link:hover {
   font-size: 32px;
   color: white;
   width: 260px;
+  white-space: nowrap;
 }
 
 .menu-element {
   margin-right: 25px;
   font-size: 22px;
+  gap: 20px;
+  justify-content: space-around;
 }
 .menu-element:last-child {
   margin-right: 0;
@@ -304,7 +307,7 @@ ul.about-me__exstra {
 }
 .interest-wrapper {
   width: 30%;
-  margin-bottom: 30px;
+  
   border-radius: 10px;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
   padding: 20px 10px;
@@ -919,4 +922,8 @@ ul.about-me__exstra {
 .social-element__link {
   width: 25px;
   height: 25px;
+}
+
+#hamburger, .menu-hamburger {
+  display: none;
 }
