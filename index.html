@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+  <head >
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Курилина Наталья Павловна | Разработчик веб-приложений</title>
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/media.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   </head>
   <body>
     <input class="checkbox" type="checkbox" name="hamburger" id="hamburger" />
@@ -18,9 +19,10 @@
     </label>
 
 
-    
-    <div class="header-top">
-      <a href="#home" class="link logo block-center">Наталья Курилина</a>
+   
+    <div class=" header-top">
+      <a href="#home" class="link logo block-center translate" data-ru="Курилина Наталья" data-en="Kurilina Natali">Наталья Курилина</a>
+
       <nav class="navigation">
         <ul class="menu block-center">
           <li class="menu-element">
@@ -43,27 +45,27 @@
             </a>
           </li>
           <li class="menu-element block-center">
-            <a class="link menu-element__link" href="#about-me">Обо&nbsp;мне</a>
+            <a class="link menu-element__link translate" data-ru="Обо мне" data-en="About me" href="#about-me">Обо&nbsp;мне</a>
           </li>
           <li class="menu-element block-center">
-            <a class="link menu-element__link" href="#achievements"
+            <a class="link menu-element__link translate" href="#achievements" data-ru="Достижения" data-en="Achievements" 
               >Достижения</a
             >
           </li>
           <li class="menu-element block-center">
-            <a class="link menu-element__link" href="#skills">Навыки</a>
+            <a class="link menu-element__link translate" data-ru="Навыки" data-en="Skills" href="#skills" href="#skills">Навыки</a>
           </li>
           <li class="menu-element block-center">
-            <a class="link menu-element__link" href="#work">Работа</a>
+            <a class="link menu-element__link translate"  data-ru="Работа" data-en="Work" href="#work">Работа</a>
           </li>
           <li class="menu-element block-center">
-            <a class="link menu-element__link" href="#Interests">Интересы</a>
+            <a class="link menu-element__link translate" data-ru="Интересы" data-en="Interests"  href="#interests">Интересы</a>
           </li>
           <li class="menu-element block-center">
-            <a class="link menu-element__link" href="#books">Книги</a>
+            <a class="link menu-element__link translate"data-ru="Книги" data-en="Books"  href="#books">Книги</a>
           </li>
           <li class="menu-element block-center">
-            <a class="link menu-element__link" href="#contact-me">Связаться</a>
+            <a class="link menu-element__link translate" data-ru="Связаться" data-en="Contact-me"  href="#contact-me">Связаться</a>
           </li>
         </ul>
       </nav>
@@ -71,20 +73,22 @@
       <div class="switcher-container block-center">
         <div class="switcher-wrapper">
           <input type="checkbox" id="lang" checked />
-          <label class="switcher" for="lang">
+          <label class="switcher" for="lang" onclick="toggleLanguage()">
             <span>RUS</span>
             <span>ENG</span>
           </label>
         </div>
       </div>
     </div>
-    <header class="header" id="home">
+    <header class="header observer-section" id="home">
       <div class="header__background"></div>
 
       <div class="header-center">
         <div class="header-center__wrapper">
-          <h1 class="name">Курилина Наталья</h1>
-          <p class="description block-center">
+          <h1 class="name translate" data-ru="Курилина Наталья" data-en="Kurilina Natali" >Курилина Наталья</h1>
+          <p class="description block-center translate" ata-ru="Привет! Меня зовут Наташа. Я веб-разработчик и блогер, давайте
+            знакомится!" data-en="Hi! My name is Natasha. I'm a web developer and blogger, let's
+            getting acquainted!">
             
             Привет! Меня зовут Наташа.<span> Я веб-разработчик</span> и блогер, давайте
             знакомится!
@@ -94,30 +98,40 @@
     </header>
 
     <!-- секция обо мне -->
-    <section class="about-me" id="about-me">
+    <section class="about-me observer-section" id="about-me">
       <div class="left">
         <img src="/img/myfoto.jpg" alt="Моя фотка" class="about-me__image" />
       </div>
       <div class="right">
-        <h2 class="about-me__title">Курилина Наталья Павловна</h2>
-        <p class="about-me__description gray">Все мы немножко fullstack...</p>
-        <p class="about-me__description">
+        <h2 class="about-me__title translate " data-ru="Курилина Наталья Павловна" data-en="Kurilina Natali Pavlovna" >Курилина Наталья Павловна</h2>
+        <p class="about-me__description gray translate" data-ru="Все мы немножко fullstack..." data-en="We are all a bit fullstack..." >Все мы немножко fullstack...</p>
+        <p class="about-me__description translate" data-ru="Я зеленый веб-разработчик со стажем в год. Начинаю свой путь с
+        написания небольших сайтов для знакомых, попробовала множество языков
+        программирования и технологий." data-en="I am a green web developer with a year's experience. I start my journey by
+        writing small websites for friends, I have tried many
+        programming languages and technologies." >
           Я зеленый веб-разработчик со стажем в год. Начинаю свой путь с
           написания небольших сайтов для знакомых, попробовала множество языков
           программирования и технологий.
         </p>
-        <p class="about-me__description">
+        <p class="about-me__description translate " data-ru="Сейчас учусь на 4 курсе колледжа,развиваюсь и совершенствуюсь.
+        Готовлюсь к выпуску. Тут я полюбила React, научилась работать в
+        команде." data-en="I am currently in my 4th year of college, developing and improving.
+        I'm getting ready to graduate. Here I fell in love with React, learned how to work in
+       a team.">
           Сейчас учусь на 4 курсе колледжа,развиваюсь и совершенствуюсь.
           Готовлюсь к выпуску. Тут я полюбила React, научилась работать в
           команде.
         </p>
-        <p class="about-me__description">
+        <p class="about-me__description translate" data-ru="Свободное время посвящаю развитию блога и рукоделию, например, рисую
+        картины по номерам,вяжу и много времени провожу с семьей." data-en="I devote my free time to blog development and needlework, for example, I paint
+        pictures by numbers, knit and spend more time with my family." >
           Свободное время посвящаю развитию блога и рукоделию, например, рисую
           картины по номерам,вяжу и побольше времени провожу с семьей.
         </p>
-        <p class="about-me__description">
+        <p class="about-me__description "    >
           Мой канал на Youtube:
-          <a href="https://www.youtube.com/@ervens" class="link" target="_blank"
+          <a href="https://www.youtube.com/@ervens "  class="link " target="_blank"
             >ervens</a
           >
         </p>
@@ -139,7 +153,7 @@
             </span>
 
             <div class="about-me__exstra-content">
-              <span class="about-me__exstra-title bold">Дата рождения:</span>
+              <span class="about-me__exstra-title bold translate"  data-ru="Дата рождения:" data-en="Happy Birthday:">Дата рождения:</span>
               <span class="colored-text">15.11.2005</span>
             </div>
           </li>
@@ -159,8 +173,8 @@
               </svg>
             </span>
             <div class="about-me__exstra-content">
-              <span class="about-me__exstra-title bold">Адрес:</span>
-              <span class="colored-text">г. Москва, Россия</span>
+              <span class="about-me__exstra-title bold translate"  data-ru="Адрес" data-en="Adress:">Адрес:</span>
+              <span class="colored-text translate" data-ru="г. Москва, Россия" data-en="Moscow, Russia">г. Москва, Россия</span>
             </div>
           </li>
           <li class="about-me__exstra-element">
@@ -177,8 +191,10 @@
               </svg>
             </span>
             <div class="about-me__exstra-content">
-              <span class="about-me__exstra-title bold"> Образование:</span>
-              <span class=" colored-text"
+              <span class="about-me__exstra-title bold translate" data-ru="Образование" data-en="Education:"> Образование:</span>
+              <span class=" colored-text translate" data-ru="МГУТУ им.Разумовского, специальность - Информационные системы и
+              программирование(ИСП)" data-en="MGUTU named afterRazumovsky, specialty - Information Systems and
+              Programming(ISP)"
                 >МГУТУ им.Разумовского, специальность - Информационные системы и
                 программирование(ИСП)</span
               >
@@ -198,12 +214,12 @@
               </svg>
             </span>
             <div class="about-me__exstra-content">
-              <span class="about-me__exstra-title bold">Курсы:</span>
-              <span class="about-me__exstra-description colored-text"
+              <span class="about-me__exstra-title bold translate" data-ru="Курсы" data-en="Courses:">Курсы:</span>
+              <span class="about-me__exstra-description colored-text translate" data-ru="Веб-разработчик (stepik)" data-en="Web-developer(stepik)"
                 >Веб-разработчик (stepik)
               </span>
 
-              <span class="about-me__exstra-description block colored-text">
+              <span class="about-me__exstra-description block colored-text translate" data-ru="Веб-дизайнер с 0 до pro (МШП)" data-en="Web Designer from 0 to pro (MSHP)">
                 Веб-дизайнер с 0 до pro (МШП)
               </span>
               <span class="about-me__exstra-description block colored-text">
@@ -215,8 +231,8 @@
       </div>
     </section>
     <!-- секция достижения -->
-    <section class="achievements section-gray block-center" id="achievements">
-      <h2 class="second-tittle">Достижения</h2>
+    <section class="achievements section-gray block-center observer-section" id="achievements">
+      <h2 class="second-tittle translate" data-ru="Достижения" data-en="Achievements" >Достижения</h2>
       <div class="achievements-list slider">
         <input
           class="slider__input"
@@ -298,1189 +314,133 @@
       </div>
     </section>
     <!-- секция навыки -->
-    <section class="skills" id="skills">
-      <h2 class="second-tittle">Навыки</h2>
-      <p class="section-description">
-        Все оценки являются субъективными и показывают уровень, который, как по
-        мне, необходим для работы.
+    <section class="skills observer-section" id="skills">
+      <h2 class="second-tittle translate" data-ru="Навыки" data-en="Skills">Навыки</h2>
+      <p class="section-description translate" data-ru=" Все оценки являются субъективными и показывают уровень, который, как по
+      мне, необходим для работы." data-en="All assessments are subjective and show the level that, in
+      my opinion, is necessary for the job.">
+          Все оценки являются субъективными и показывают уровень, который, как по
+          мне, необходим для работы.
       </p>
-
+  
       <ul class="skills-filters block-center">
-        <li role="button" class="skills-filter active">Все</li>
-        <li role="button" class="skills-filter">Html/css</li>
-        <li role="button" class="skills-filter">Js</li>
-        <li role="button" class="skills-filter">React</li>
-        <li role="button" class="skills-filter">Database</li>
+          <li role="button" class="skills-filter active" data-filter="all">Все</li>
+          <li role="button" class="skills-filter" data-filter="html-css">Html/css</li>
+          <li role="button" class="skills-filter" data-filter="js">Js</li>
+          <li role="button" class="skills-filter" data-filter="react">React</li>
+          <li role="button" class="skills-filter" data-filter="database">Database</li>
       </ul>
-      <!-- в предыдущий раз было разделение на всю секцию , а здесь мы разделяем уже внутри секции с каким-то контентом -->
+  
       <div class="skills-wrapper">
-        <div class="skills-list left">
-          <div class="skills-list__row">
-            <div class="skills-list__element">
-              <svg
-                id="svg3430"
-                version="1.1"
-                viewBox="0 0 711.20123 383.5975"
-                width="711.20123"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:cc="http://creativecommons.org/ns#"
-                xmlns:dc="http://purl.org/dc/elements/1.1/"
-                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                xmlns:svg="http://www.w3.org/2000/svg"
-              >
-                <title id="title3510">Official PHP Logo</title>
-                <metadata id="metadata3436">
-                  <rdf:RDF>
-                    <cc:Work rdf:about="">
-                      <dc:format>image/svg+xml</dc:format>
-                      <dc:type
-                        rdf:resource="http://purl.org/dc/dcmitype/StillImage"
-                      />
-                      <dc:title>Official PHP Logo</dc:title>
-                      <dc:creator>
-                        <cc:Agent>
-                          <dc:title>Colin Viebrock</dc:title>
-                        </cc:Agent>
-                      </dc:creator>
-                      <dc:description />
-                      <dc:contributor>
-                        <cc:Agent>
-                          <dc:title />
-                        </cc:Agent>
-                      </dc:contributor>
-                      <cc:license
-                        rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"
-                      />
-                      <dc:rights>
-                        <cc:Agent>
-                          <dc:title
-                            >Copyright Colin Viebrock 1997 - All rights
-                            reserved.</dc:title
-                          >
-                        </cc:Agent>
-                      </dc:rights>
-                      <dc:date>1997</dc:date>
-                    </cc:Work>
-                    <cc:License
-                      rdf:about="http://creativecommons.org/licenses/by-sa/4.0/"
-                    >
-                      <cc:permits
-                        rdf:resource="http://creativecommons.org/ns#Reproduction"
-                      />
-                      <cc:permits
-                        rdf:resource="http://creativecommons.org/ns#Distribution"
-                      />
-                      <cc:requires
-                        rdf:resource="http://creativecommons.org/ns#Notice"
-                      />
-                      <cc:requires
-                        rdf:resource="http://creativecommons.org/ns#Attribution"
-                      />
-                      <cc:permits
-                        rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
-                      />
-                      <cc:requires
-                        rdf:resource="http://creativecommons.org/ns#ShareAlike"
-                      />
-                    </cc:License>
-                  </rdf:RDF>
-                </metadata>
-                <defs id="defs3434">
-                  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3444">
-                    <path
-                      d="M 11.52,162 C 11.52,81.677 135.307,16.561 288,16.561 l 0,0 c 152.693,0 276.481,65.116 276.481,145.439 l 0,0 c 0,80.322 -123.788,145.439 -276.481,145.439 l 0,0 C 135.307,307.439 11.52,242.322 11.52,162"
-                      id="path3446"
-                    />
-                  </clipPath>
-                  <radialGradient
-                    cx="0"
-                    cy="0"
-                    fx="0"
-                    fy="0"
-                    gradientTransform="matrix(363.05789,0,0,-363.05789,177.52002,256.30713)"
-                    gradientUnits="userSpaceOnUse"
-                    id="radialGradient3452"
-                    r="1"
-                    spreadMethod="pad"
-                  >
-                    <stop
-                      id="stop3454"
-                      offset="0"
-                      style="stop-opacity: 1; stop-color: #aeb2d5"
-                    />
-                    <stop
-                      id="stop3456"
-                      offset="0.3"
-                      style="stop-opacity: 1; stop-color: #aeb2d5"
-                    />
-                    <stop
-                      id="stop3458"
-                      offset="0.75"
-                      style="stop-opacity: 1; stop-color: #484c89"
-                    />
-                    <stop
-                      id="stop3460"
-                      offset="1"
-                      style="stop-opacity: 1; stop-color: #484c89"
-                    />
-                  </radialGradient>
-                  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3468">
-                    <path d="M 0,324 576,324 576,0 0,0 0,324 Z" id="path3470" />
-                  </clipPath>
-                  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3480">
-                    <path d="M 0,324 576,324 576,0 0,0 0,324 Z" id="path3482" />
-                  </clipPath>
-                </defs>
-                <g id="g3438" transform="matrix(1.25,0,0,-1.25,-4.4,394.29875)">
-                  <g id="g3440">
-                    <g clip-path="url(#clipPath3444)" id="g3442">
-                      <g id="g3448">
-                        <g id="g3450">
-                          <path
-                            d="M 11.52,162 C 11.52,81.677 135.307,16.561 288,16.561 l 0,0 c 152.693,0 276.481,65.116 276.481,145.439 l 0,0 c 0,80.322 -123.788,145.439 -276.481,145.439 l 0,0 C 135.307,307.439 11.52,242.322 11.52,162"
-                            id="path3462"
-                            style="fill: url(#radialGradient3452); stroke: none"
-                          />
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                  <g id="g3464">
-                    <g clip-path="url(#clipPath3468)" id="g3466">
-                      <g id="g3472" transform="translate(288,27.3594)">
-                        <path
-                          d="M 0,0 C 146.729,0 265.68,60.281 265.68,134.641 265.68,209 146.729,269.282 0,269.282 -146.729,269.282 -265.68,209 -265.68,134.641 -265.68,60.281 -146.729,0 0,0"
-                          id="path3474"
-                          style="
-                            fill: #777bb3;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                    </g>
-                  </g>
-                  <g id="g3476">
-                    <g clip-path="url(#clipPath3480)" id="g3478">
-                      <g id="g3484" transform="translate(161.7344,145.3066)">
-                        <path
-                          d="m 0,0 c 12.065,0 21.072,2.225 26.771,6.611 5.638,4.341 9.532,11.862 11.573,22.353 1.903,9.806 1.178,16.653 -2.154,20.348 C 32.783,53.086 25.417,55 14.297,55 L -4.984,55 -15.673,0 0,0 Z m -63.063,-67.75 c -0.895,0 -1.745,0.4 -2.314,1.092 -0.57,0.691 -0.801,1.601 -0.63,2.48 L -37.679,81.573 C -37.405,82.982 -36.17,84 -34.734,84 L 26.32,84 C 45.508,84 59.79,78.79 68.767,68.513 77.792,58.182 80.579,43.741 77.05,25.592 75.614,18.198 73.144,11.331 69.709,5.183 66.27,-0.972 61.725,-6.667 56.198,-11.747 49.582,-17.939 42.094,-22.429 33.962,-25.071 25.959,-27.678 15.681,-29 3.414,-29 l -24.722,0 -7.06,-36.322 c -0.274,-1.41 -1.508,-2.428 -2.944,-2.428 l -31.751,0 z"
-                          id="path3486"
-                          style="
-                            fill: #000000;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3488" transform="translate(159.2236,197.3071)">
-                        <path
-                          d="m 0,0 16.808,0 c 13.421,0 18.083,-2.945 19.667,-4.7 2.628,-2.914 3.124,-9.058 1.435,-17.767 C 36.012,-32.217 32.494,-39.13 27.452,-43.012 22.29,-46.986 13.898,-49 2.511,-49 L -9.523,-49 0,0 Z m 28.831,35 -61.055,0 c -2.872,0 -5.341,-2.036 -5.889,-4.855 l -28.328,-145.751 c -0.342,-1.759 0.12,-3.578 1.259,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.75,0 c 2.873,0 5.342,2.036 5.89,4.855 l 6.588,33.895 22.249,0 c 12.582,0 23.174,1.372 31.479,4.077 8.541,2.775 16.399,7.48 23.354,13.984 5.752,5.292 10.49,11.232 14.08,17.657 3.591,6.427 6.171,13.594 7.668,21.302 3.715,19.104 0.697,34.402 -8.969,45.466 C 63.965,29.444 48.923,35 28.831,35 m -45.633,-90 19.313,0 c 12.801,0 22.336,2.411 28.601,7.234 6.266,4.824 10.492,12.875 12.688,24.157 2.101,10.832 1.144,18.476 -2.871,22.929 C 36.909,3.773 28.87,6 16.808,6 L -4.946,6 -16.802,-55 M 28.831,29 C 47.198,29 60.597,24.18 69.019,14.539 77.44,4.898 79.976,-8.559 76.616,-25.836 75.233,-32.953 72.894,-39.46 69.601,-45.355 66.304,-51.254 61.999,-56.648 56.679,-61.539 50.339,-67.472 43.296,-71.7 35.546,-74.218 27.796,-76.743 17.925,-78 5.925,-78 l -27.196,0 -7.531,-38.75 -31.75,0 28.328,145.75 61.055,0"
-                          id="path3490"
-                          style="
-                            fill: #ffffff;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3492" transform="translate(311.583,116.3066)">
-                        <path
-                          d="m 0,0 c -0.896,0 -1.745,0.4 -2.314,1.092 -0.571,0.691 -0.802,1.6 -0.631,2.48 L 9.586,68.061 C 10.778,74.194 10.484,78.596 8.759,80.456 7.703,81.593 4.531,83.5 -4.848,83.5 L -27.55,83.5 -43.305,2.428 C -43.579,1.018 -44.814,0 -46.25,0 l -31.5,0 c -0.896,0 -1.745,0.4 -2.315,1.092 -0.57,0.691 -0.801,1.601 -0.63,2.48 l 28.328,145.751 c 0.274,1.409 1.509,2.427 2.945,2.427 l 31.5,0 c 0.896,0 1.745,-0.4 2.315,-1.091 0.57,-0.692 0.801,-1.601 0.63,-2.481 L -21.813,113 2.609,113 c 18.605,0 31.221,-3.28 38.569,-10.028 7.49,-6.884 9.827,-17.891 6.947,-32.719 L 34.945,2.428 C 34.671,1.018 33.437,0 32,0 L 0,0 Z"
-                          id="path3494"
-                          style="
-                            fill: #000000;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3496" transform="translate(293.6611,271.0571)">
-                        <path
-                          d="m 0,0 -31.5,0 c -2.873,0 -5.342,-2.036 -5.89,-4.855 l -28.328,-145.751 c -0.342,-1.759 0.12,-3.578 1.26,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.5,0 c 2.872,0 5.342,2.036 5.89,4.855 l 15.283,78.645 20.229,0 c 9.363,0 11.328,-2 11.407,-2.086 0.568,-0.611 1.315,-3.441 0.082,-9.781 l -12.531,-64.489 c -0.342,-1.759 0.12,-3.578 1.26,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 32,0 c 2.872,0 5.342,2.036 5.89,4.855 l 13.179,67.825 c 3.093,15.921 0.447,27.864 -7.861,35.5 -7.928,7.281 -21.208,10.82 -40.599,10.82 l -20.784,0 6.143,31.605 C 6.231,-5.386 5.77,-3.566 4.63,-2.184 3.49,-0.801 1.792,0 0,0 m 0,-6 -7.531,-38.75 28.062,0 c 17.657,0 29.836,-3.082 36.539,-9.238 6.703,-6.16 8.711,-16.141 6.032,-29.938 l -13.18,-67.824 -32,0 12.531,64.488 c 1.426,7.336 0.902,12.34 -1.574,15.008 -2.477,2.668 -7.746,4.004 -15.805,4.004 l -25.176,0 -16.226,-83.5 -31.5,0 L -31.5,-6 0,-6"
-                          id="path3498"
-                          style="
-                            fill: #ffffff;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3500" transform="translate(409.5498,145.3066)">
-                        <path
-                          d="m 0,0 c 12.065,0 21.072,2.225 26.771,6.611 5.638,4.34 9.532,11.861 11.574,22.353 1.903,9.806 1.178,16.653 -2.155,20.348 C 32.783,53.086 25.417,55 14.297,55 L -4.984,55 -15.673,0 0,0 Z m -63.062,-67.75 c -0.895,0 -1.745,0.4 -2.314,1.092 -0.57,0.691 -0.802,1.601 -0.631,2.48 L -37.679,81.573 C -37.404,82.982 -36.17,84 -34.733,84 L 26.32,84 C 45.509,84 59.79,78.79 68.768,68.513 77.793,58.183 80.579,43.742 77.051,25.592 75.613,18.198 73.144,11.331 69.709,5.183 66.27,-0.972 61.725,-6.667 56.198,-11.747 49.582,-17.939 42.094,-22.429 33.962,-25.071 25.959,-27.678 15.681,-29 3.414,-29 l -24.723,0 -7.057,-36.322 c -0.275,-1.41 -1.509,-2.428 -2.946,-2.428 l -31.75,0 z"
-                          id="path3502"
-                          style="
-                            fill: #000000;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3504" transform="translate(407.0391,197.3071)">
-                        <path
-                          d="M 0,0 16.808,0 C 30.229,0 34.891,-2.945 36.475,-4.7 39.104,-7.614 39.6,-13.758 37.91,-22.466 36.012,-32.217 32.493,-39.13 27.452,-43.012 22.29,-46.986 13.898,-49 2.511,-49 L -9.522,-49 0,0 Z m 28.831,35 -61.054,0 c -2.872,0 -5.341,-2.036 -5.889,-4.855 L -66.44,-115.606 c -0.342,-1.759 0.12,-3.578 1.259,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.75,0 c 2.872,0 5.342,2.036 5.89,4.855 l 6.587,33.895 22.249,0 c 12.582,0 23.174,1.372 31.479,4.077 8.541,2.775 16.401,7.481 23.356,13.986 5.752,5.291 10.488,11.23 14.078,17.655 3.591,6.427 6.171,13.594 7.668,21.302 3.715,19.105 0.697,34.403 -8.969,45.467 C 63.965,29.444 48.924,35 28.831,35 m -45.632,-90 19.312,0 c 12.801,0 22.336,2.411 28.601,7.234 6.267,4.824 10.492,12.875 12.688,24.157 2.102,10.832 1.145,18.476 -2.871,22.929 C 36.909,3.773 28.87,6 16.808,6 L -4.946,6 -16.801,-55 M 28.831,29 C 47.198,29 60.597,24.18 69.019,14.539 77.441,4.898 79.976,-8.559 76.616,-25.836 75.233,-32.953 72.894,-39.46 69.601,-45.355 66.304,-51.254 61.999,-56.648 56.679,-61.539 50.339,-67.472 43.296,-71.7 35.546,-74.218 27.796,-76.743 17.925,-78 5.925,-78 l -27.196,0 -7.53,-38.75 -31.75,0 28.328,145.75 61.054,0"
-                          id="path3506"
-                          style="
-                            fill: #ffffff;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-              <span class="skills--list__tittle">Php</span>
-            </div>
-            <div class="skills-list__element">
-              <svg
-                id="svg3430"
-                version="1.1"
-                viewBox="0 0 711.20123 383.5975"
-                width="711.20123"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:cc="http://creativecommons.org/ns#"
-                xmlns:dc="http://purl.org/dc/elements/1.1/"
-                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                xmlns:svg="http://www.w3.org/2000/svg"
-              >
-                <title id="title3510">Official PHP Logo</title>
-                <metadata id="metadata3436">
-                  <rdf:RDF>
-                    <cc:Work rdf:about="">
-                      <dc:format>image/svg+xml</dc:format>
-                      <dc:type
-                        rdf:resource="http://purl.org/dc/dcmitype/StillImage"
-                      />
-                      <dc:title>Official PHP Logo</dc:title>
-                      <dc:creator>
-                        <cc:Agent>
-                          <dc:title>Colin Viebrock</dc:title>
-                        </cc:Agent>
-                      </dc:creator>
-                      <dc:description />
-                      <dc:contributor>
-                        <cc:Agent>
-                          <dc:title />
-                        </cc:Agent>
-                      </dc:contributor>
-                      <cc:license
-                        rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"
-                      />
-                      <dc:rights>
-                        <cc:Agent>
-                          <dc:title
-                            >Copyright Colin Viebrock 1997 - All rights
-                            reserved.</dc:title
-                          >
-                        </cc:Agent>
-                      </dc:rights>
-                      <dc:date>1997</dc:date>
-                    </cc:Work>
-                    <cc:License
-                      rdf:about="http://creativecommons.org/licenses/by-sa/4.0/"
-                    >
-                      <cc:permits
-                        rdf:resource="http://creativecommons.org/ns#Reproduction"
-                      />
-                      <cc:permits
-                        rdf:resource="http://creativecommons.org/ns#Distribution"
-                      />
-                      <cc:requires
-                        rdf:resource="http://creativecommons.org/ns#Notice"
-                      />
-                      <cc:requires
-                        rdf:resource="http://creativecommons.org/ns#Attribution"
-                      />
-                      <cc:permits
-                        rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
-                      />
-                      <cc:requires
-                        rdf:resource="http://creativecommons.org/ns#ShareAlike"
-                      />
-                    </cc:License>
-                  </rdf:RDF>
-                </metadata>
-                <defs id="defs3434">
-                  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3444">
-                    <path
-                      d="M 11.52,162 C 11.52,81.677 135.307,16.561 288,16.561 l 0,0 c 152.693,0 276.481,65.116 276.481,145.439 l 0,0 c 0,80.322 -123.788,145.439 -276.481,145.439 l 0,0 C 135.307,307.439 11.52,242.322 11.52,162"
-                      id="path3446"
-                    />
-                  </clipPath>
-                  <radialGradient
-                    cx="0"
-                    cy="0"
-                    fx="0"
-                    fy="0"
-                    gradientTransform="matrix(363.05789,0,0,-363.05789,177.52002,256.30713)"
-                    gradientUnits="userSpaceOnUse"
-                    id="radialGradient3452"
-                    r="1"
-                    spreadMethod="pad"
-                  >
-                    <stop
-                      id="stop3454"
-                      offset="0"
-                      style="stop-opacity: 1; stop-color: #aeb2d5"
-                    />
-                    <stop
-                      id="stop3456"
-                      offset="0.3"
-                      style="stop-opacity: 1; stop-color: #aeb2d5"
-                    />
-                    <stop
-                      id="stop3458"
-                      offset="0.75"
-                      style="stop-opacity: 1; stop-color: #484c89"
-                    />
-                    <stop
-                      id="stop3460"
-                      offset="1"
-                      style="stop-opacity: 1; stop-color: #484c89"
-                    />
-                  </radialGradient>
-                  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3468">
-                    <path d="M 0,324 576,324 576,0 0,0 0,324 Z" id="path3470" />
-                  </clipPath>
-                  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3480">
-                    <path d="M 0,324 576,324 576,0 0,0 0,324 Z" id="path3482" />
-                  </clipPath>
-                </defs>
-                <g id="g3438" transform="matrix(1.25,0,0,-1.25,-4.4,394.29875)">
-                  <g id="g3440">
-                    <g clip-path="url(#clipPath3444)" id="g3442">
-                      <g id="g3448">
-                        <g id="g3450">
-                          <path
-                            d="M 11.52,162 C 11.52,81.677 135.307,16.561 288,16.561 l 0,0 c 152.693,0 276.481,65.116 276.481,145.439 l 0,0 c 0,80.322 -123.788,145.439 -276.481,145.439 l 0,0 C 135.307,307.439 11.52,242.322 11.52,162"
-                            id="path3462"
-                            style="fill: url(#radialGradient3452); stroke: none"
-                          />
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                  <g id="g3464">
-                    <g clip-path="url(#clipPath3468)" id="g3466">
-                      <g id="g3472" transform="translate(288,27.3594)">
-                        <path
-                          d="M 0,0 C 146.729,0 265.68,60.281 265.68,134.641 265.68,209 146.729,269.282 0,269.282 -146.729,269.282 -265.68,209 -265.68,134.641 -265.68,60.281 -146.729,0 0,0"
-                          id="path3474"
-                          style="
-                            fill: #777bb3;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                    </g>
-                  </g>
-                  <g id="g3476">
-                    <g clip-path="url(#clipPath3480)" id="g3478">
-                      <g id="g3484" transform="translate(161.7344,145.3066)">
-                        <path
-                          d="m 0,0 c 12.065,0 21.072,2.225 26.771,6.611 5.638,4.341 9.532,11.862 11.573,22.353 1.903,9.806 1.178,16.653 -2.154,20.348 C 32.783,53.086 25.417,55 14.297,55 L -4.984,55 -15.673,0 0,0 Z m -63.063,-67.75 c -0.895,0 -1.745,0.4 -2.314,1.092 -0.57,0.691 -0.801,1.601 -0.63,2.48 L -37.679,81.573 C -37.405,82.982 -36.17,84 -34.734,84 L 26.32,84 C 45.508,84 59.79,78.79 68.767,68.513 77.792,58.182 80.579,43.741 77.05,25.592 75.614,18.198 73.144,11.331 69.709,5.183 66.27,-0.972 61.725,-6.667 56.198,-11.747 49.582,-17.939 42.094,-22.429 33.962,-25.071 25.959,-27.678 15.681,-29 3.414,-29 l -24.722,0 -7.06,-36.322 c -0.274,-1.41 -1.508,-2.428 -2.944,-2.428 l -31.751,0 z"
-                          id="path3486"
-                          style="
-                            fill: #000000;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3488" transform="translate(159.2236,197.3071)">
-                        <path
-                          d="m 0,0 16.808,0 c 13.421,0 18.083,-2.945 19.667,-4.7 2.628,-2.914 3.124,-9.058 1.435,-17.767 C 36.012,-32.217 32.494,-39.13 27.452,-43.012 22.29,-46.986 13.898,-49 2.511,-49 L -9.523,-49 0,0 Z m 28.831,35 -61.055,0 c -2.872,0 -5.341,-2.036 -5.889,-4.855 l -28.328,-145.751 c -0.342,-1.759 0.12,-3.578 1.259,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.75,0 c 2.873,0 5.342,2.036 5.89,4.855 l 6.588,33.895 22.249,0 c 12.582,0 23.174,1.372 31.479,4.077 8.541,2.775 16.399,7.48 23.354,13.984 5.752,5.292 10.49,11.232 14.08,17.657 3.591,6.427 6.171,13.594 7.668,21.302 3.715,19.104 0.697,34.402 -8.969,45.466 C 63.965,29.444 48.923,35 28.831,35 m -45.633,-90 19.313,0 c 12.801,0 22.336,2.411 28.601,7.234 6.266,4.824 10.492,12.875 12.688,24.157 2.101,10.832 1.144,18.476 -2.871,22.929 C 36.909,3.773 28.87,6 16.808,6 L -4.946,6 -16.802,-55 M 28.831,29 C 47.198,29 60.597,24.18 69.019,14.539 77.44,4.898 79.976,-8.559 76.616,-25.836 75.233,-32.953 72.894,-39.46 69.601,-45.355 66.304,-51.254 61.999,-56.648 56.679,-61.539 50.339,-67.472 43.296,-71.7 35.546,-74.218 27.796,-76.743 17.925,-78 5.925,-78 l -27.196,0 -7.531,-38.75 -31.75,0 28.328,145.75 61.055,0"
-                          id="path3490"
-                          style="
-                            fill: #ffffff;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3492" transform="translate(311.583,116.3066)">
-                        <path
-                          d="m 0,0 c -0.896,0 -1.745,0.4 -2.314,1.092 -0.571,0.691 -0.802,1.6 -0.631,2.48 L 9.586,68.061 C 10.778,74.194 10.484,78.596 8.759,80.456 7.703,81.593 4.531,83.5 -4.848,83.5 L -27.55,83.5 -43.305,2.428 C -43.579,1.018 -44.814,0 -46.25,0 l -31.5,0 c -0.896,0 -1.745,0.4 -2.315,1.092 -0.57,0.691 -0.801,1.601 -0.63,2.48 l 28.328,145.751 c 0.274,1.409 1.509,2.427 2.945,2.427 l 31.5,0 c 0.896,0 1.745,-0.4 2.315,-1.091 0.57,-0.692 0.801,-1.601 0.63,-2.481 L -21.813,113 2.609,113 c 18.605,0 31.221,-3.28 38.569,-10.028 7.49,-6.884 9.827,-17.891 6.947,-32.719 L 34.945,2.428 C 34.671,1.018 33.437,0 32,0 L 0,0 Z"
-                          id="path3494"
-                          style="
-                            fill: #000000;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3496" transform="translate(293.6611,271.0571)">
-                        <path
-                          d="m 0,0 -31.5,0 c -2.873,0 -5.342,-2.036 -5.89,-4.855 l -28.328,-145.751 c -0.342,-1.759 0.12,-3.578 1.26,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.5,0 c 2.872,0 5.342,2.036 5.89,4.855 l 15.283,78.645 20.229,0 c 9.363,0 11.328,-2 11.407,-2.086 0.568,-0.611 1.315,-3.441 0.082,-9.781 l -12.531,-64.489 c -0.342,-1.759 0.12,-3.578 1.26,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 32,0 c 2.872,0 5.342,2.036 5.89,4.855 l 13.179,67.825 c 3.093,15.921 0.447,27.864 -7.861,35.5 -7.928,7.281 -21.208,10.82 -40.599,10.82 l -20.784,0 6.143,31.605 C 6.231,-5.386 5.77,-3.566 4.63,-2.184 3.49,-0.801 1.792,0 0,0 m 0,-6 -7.531,-38.75 28.062,0 c 17.657,0 29.836,-3.082 36.539,-9.238 6.703,-6.16 8.711,-16.141 6.032,-29.938 l -13.18,-67.824 -32,0 12.531,64.488 c 1.426,7.336 0.902,12.34 -1.574,15.008 -2.477,2.668 -7.746,4.004 -15.805,4.004 l -25.176,0 -16.226,-83.5 -31.5,0 L -31.5,-6 0,-6"
-                          id="path3498"
-                          style="
-                            fill: #ffffff;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3500" transform="translate(409.5498,145.3066)">
-                        <path
-                          d="m 0,0 c 12.065,0 21.072,2.225 26.771,6.611 5.638,4.34 9.532,11.861 11.574,22.353 1.903,9.806 1.178,16.653 -2.155,20.348 C 32.783,53.086 25.417,55 14.297,55 L -4.984,55 -15.673,0 0,0 Z m -63.062,-67.75 c -0.895,0 -1.745,0.4 -2.314,1.092 -0.57,0.691 -0.802,1.601 -0.631,2.48 L -37.679,81.573 C -37.404,82.982 -36.17,84 -34.733,84 L 26.32,84 C 45.509,84 59.79,78.79 68.768,68.513 77.793,58.183 80.579,43.742 77.051,25.592 75.613,18.198 73.144,11.331 69.709,5.183 66.27,-0.972 61.725,-6.667 56.198,-11.747 49.582,-17.939 42.094,-22.429 33.962,-25.071 25.959,-27.678 15.681,-29 3.414,-29 l -24.723,0 -7.057,-36.322 c -0.275,-1.41 -1.509,-2.428 -2.946,-2.428 l -31.75,0 z"
-                          id="path3502"
-                          style="
-                            fill: #000000;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3504" transform="translate(407.0391,197.3071)">
-                        <path
-                          d="M 0,0 16.808,0 C 30.229,0 34.891,-2.945 36.475,-4.7 39.104,-7.614 39.6,-13.758 37.91,-22.466 36.012,-32.217 32.493,-39.13 27.452,-43.012 22.29,-46.986 13.898,-49 2.511,-49 L -9.522,-49 0,0 Z m 28.831,35 -61.054,0 c -2.872,0 -5.341,-2.036 -5.889,-4.855 L -66.44,-115.606 c -0.342,-1.759 0.12,-3.578 1.259,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.75,0 c 2.872,0 5.342,2.036 5.89,4.855 l 6.587,33.895 22.249,0 c 12.582,0 23.174,1.372 31.479,4.077 8.541,2.775 16.401,7.481 23.356,13.986 5.752,5.291 10.488,11.23 14.078,17.655 3.591,6.427 6.171,13.594 7.668,21.302 3.715,19.105 0.697,34.403 -8.969,45.467 C 63.965,29.444 48.924,35 28.831,35 m -45.632,-90 19.312,0 c 12.801,0 22.336,2.411 28.601,7.234 6.267,4.824 10.492,12.875 12.688,24.157 2.102,10.832 1.145,18.476 -2.871,22.929 C 36.909,3.773 28.87,6 16.808,6 L -4.946,6 -16.801,-55 M 28.831,29 C 47.198,29 60.597,24.18 69.019,14.539 77.441,4.898 79.976,-8.559 76.616,-25.836 75.233,-32.953 72.894,-39.46 69.601,-45.355 66.304,-51.254 61.999,-56.648 56.679,-61.539 50.339,-67.472 43.296,-71.7 35.546,-74.218 27.796,-76.743 17.925,-78 5.925,-78 l -27.196,0 -7.53,-38.75 -31.75,0 28.328,145.75 61.054,0"
-                          id="path3506"
-                          style="
-                            fill: #ffffff;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-              <span class="skills--list__tittle">Laravel</span>
-            </div>
-            <div class="skills-list__element">
-              <svg
-                id="svg3430"
-                version="1.1"
-                viewBox="0 0 711.20123 383.5975"
-                width="711.20123"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:cc="http://creativecommons.org/ns#"
-                xmlns:dc="http://purl.org/dc/elements/1.1/"
-                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                xmlns:svg="http://www.w3.org/2000/svg"
-              >
-                <title id="title3510">Official PHP Logo</title>
-                <metadata id="metadata3436">
-                  <rdf:RDF>
-                    <cc:Work rdf:about="">
-                      <dc:format>image/svg+xml</dc:format>
-                      <dc:type
-                        rdf:resource="http://purl.org/dc/dcmitype/StillImage"
-                      />
-                      <dc:title>Official PHP Logo</dc:title>
-                      <dc:creator>
-                        <cc:Agent>
-                          <dc:title>Colin Viebrock</dc:title>
-                        </cc:Agent>
-                      </dc:creator>
-                      <dc:description />
-                      <dc:contributor>
-                        <cc:Agent>
-                          <dc:title />
-                        </cc:Agent>
-                      </dc:contributor>
-                      <cc:license
-                        rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"
-                      />
-                      <dc:rights>
-                        <cc:Agent>
-                          <dc:title
-                            >Copyright Colin Viebrock 1997 - All rights
-                            reserved.</dc:title
-                          >
-                        </cc:Agent>
-                      </dc:rights>
-                      <dc:date>1997</dc:date>
-                    </cc:Work>
-                    <cc:License
-                      rdf:about="http://creativecommons.org/licenses/by-sa/4.0/"
-                    >
-                      <cc:permits
-                        rdf:resource="http://creativecommons.org/ns#Reproduction"
-                      />
-                      <cc:permits
-                        rdf:resource="http://creativecommons.org/ns#Distribution"
-                      />
-                      <cc:requires
-                        rdf:resource="http://creativecommons.org/ns#Notice"
-                      />
-                      <cc:requires
-                        rdf:resource="http://creativecommons.org/ns#Attribution"
-                      />
-                      <cc:permits
-                        rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
-                      />
-                      <cc:requires
-                        rdf:resource="http://creativecommons.org/ns#ShareAlike"
-                      />
-                    </cc:License>
-                  </rdf:RDF>
-                </metadata>
-                <defs id="defs3434">
-                  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3444">
-                    <path
-                      d="M 11.52,162 C 11.52,81.677 135.307,16.561 288,16.561 l 0,0 c 152.693,0 276.481,65.116 276.481,145.439 l 0,0 c 0,80.322 -123.788,145.439 -276.481,145.439 l 0,0 C 135.307,307.439 11.52,242.322 11.52,162"
-                      id="path3446"
-                    />
-                  </clipPath>
-                  <radialGradient
-                    cx="0"
-                    cy="0"
-                    fx="0"
-                    fy="0"
-                    gradientTransform="matrix(363.05789,0,0,-363.05789,177.52002,256.30713)"
-                    gradientUnits="userSpaceOnUse"
-                    id="radialGradient3452"
-                    r="1"
-                    spreadMethod="pad"
-                  >
-                    <stop
-                      id="stop3454"
-                      offset="0"
-                      style="stop-opacity: 1; stop-color: #aeb2d5"
-                    />
-                    <stop
-                      id="stop3456"
-                      offset="0.3"
-                      style="stop-opacity: 1; stop-color: #aeb2d5"
-                    />
-                    <stop
-                      id="stop3458"
-                      offset="0.75"
-                      style="stop-opacity: 1; stop-color: #484c89"
-                    />
-                    <stop
-                      id="stop3460"
-                      offset="1"
-                      style="stop-opacity: 1; stop-color: #484c89"
-                    />
-                  </radialGradient>
-                  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3468">
-                    <path d="M 0,324 576,324 576,0 0,0 0,324 Z" id="path3470" />
-                  </clipPath>
-                  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3480">
-                    <path d="M 0,324 576,324 576,0 0,0 0,324 Z" id="path3482" />
-                  </clipPath>
-                </defs>
-                <g id="g3438" transform="matrix(1.25,0,0,-1.25,-4.4,394.29875)">
-                  <g id="g3440">
-                    <g clip-path="url(#clipPath3444)" id="g3442">
-                      <g id="g3448">
-                        <g id="g3450">
-                          <path
-                            d="M 11.52,162 C 11.52,81.677 135.307,16.561 288,16.561 l 0,0 c 152.693,0 276.481,65.116 276.481,145.439 l 0,0 c 0,80.322 -123.788,145.439 -276.481,145.439 l 0,0 C 135.307,307.439 11.52,242.322 11.52,162"
-                            id="path3462"
-                            style="fill: url(#radialGradient3452); stroke: none"
-                          />
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                  <g id="g3464">
-                    <g clip-path="url(#clipPath3468)" id="g3466">
-                      <g id="g3472" transform="translate(288,27.3594)">
-                        <path
-                          d="M 0,0 C 146.729,0 265.68,60.281 265.68,134.641 265.68,209 146.729,269.282 0,269.282 -146.729,269.282 -265.68,209 -265.68,134.641 -265.68,60.281 -146.729,0 0,0"
-                          id="path3474"
-                          style="
-                            fill: #777bb3;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                    </g>
-                  </g>
-                  <g id="g3476">
-                    <g clip-path="url(#clipPath3480)" id="g3478">
-                      <g id="g3484" transform="translate(161.7344,145.3066)">
-                        <path
-                          d="m 0,0 c 12.065,0 21.072,2.225 26.771,6.611 5.638,4.341 9.532,11.862 11.573,22.353 1.903,9.806 1.178,16.653 -2.154,20.348 C 32.783,53.086 25.417,55 14.297,55 L -4.984,55 -15.673,0 0,0 Z m -63.063,-67.75 c -0.895,0 -1.745,0.4 -2.314,1.092 -0.57,0.691 -0.801,1.601 -0.63,2.48 L -37.679,81.573 C -37.405,82.982 -36.17,84 -34.734,84 L 26.32,84 C 45.508,84 59.79,78.79 68.767,68.513 77.792,58.182 80.579,43.741 77.05,25.592 75.614,18.198 73.144,11.331 69.709,5.183 66.27,-0.972 61.725,-6.667 56.198,-11.747 49.582,-17.939 42.094,-22.429 33.962,-25.071 25.959,-27.678 15.681,-29 3.414,-29 l -24.722,0 -7.06,-36.322 c -0.274,-1.41 -1.508,-2.428 -2.944,-2.428 l -31.751,0 z"
-                          id="path3486"
-                          style="
-                            fill: #000000;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3488" transform="translate(159.2236,197.3071)">
-                        <path
-                          d="m 0,0 16.808,0 c 13.421,0 18.083,-2.945 19.667,-4.7 2.628,-2.914 3.124,-9.058 1.435,-17.767 C 36.012,-32.217 32.494,-39.13 27.452,-43.012 22.29,-46.986 13.898,-49 2.511,-49 L -9.523,-49 0,0 Z m 28.831,35 -61.055,0 c -2.872,0 -5.341,-2.036 -5.889,-4.855 l -28.328,-145.751 c -0.342,-1.759 0.12,-3.578 1.259,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.75,0 c 2.873,0 5.342,2.036 5.89,4.855 l 6.588,33.895 22.249,0 c 12.582,0 23.174,1.372 31.479,4.077 8.541,2.775 16.399,7.48 23.354,13.984 5.752,5.292 10.49,11.232 14.08,17.657 3.591,6.427 6.171,13.594 7.668,21.302 3.715,19.104 0.697,34.402 -8.969,45.466 C 63.965,29.444 48.923,35 28.831,35 m -45.633,-90 19.313,0 c 12.801,0 22.336,2.411 28.601,7.234 6.266,4.824 10.492,12.875 12.688,24.157 2.101,10.832 1.144,18.476 -2.871,22.929 C 36.909,3.773 28.87,6 16.808,6 L -4.946,6 -16.802,-55 M 28.831,29 C 47.198,29 60.597,24.18 69.019,14.539 77.44,4.898 79.976,-8.559 76.616,-25.836 75.233,-32.953 72.894,-39.46 69.601,-45.355 66.304,-51.254 61.999,-56.648 56.679,-61.539 50.339,-67.472 43.296,-71.7 35.546,-74.218 27.796,-76.743 17.925,-78 5.925,-78 l -27.196,0 -7.531,-38.75 -31.75,0 28.328,145.75 61.055,0"
-                          id="path3490"
-                          style="
-                            fill: #ffffff;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3492" transform="translate(311.583,116.3066)">
-                        <path
-                          d="m 0,0 c -0.896,0 -1.745,0.4 -2.314,1.092 -0.571,0.691 -0.802,1.6 -0.631,2.48 L 9.586,68.061 C 10.778,74.194 10.484,78.596 8.759,80.456 7.703,81.593 4.531,83.5 -4.848,83.5 L -27.55,83.5 -43.305,2.428 C -43.579,1.018 -44.814,0 -46.25,0 l -31.5,0 c -0.896,0 -1.745,0.4 -2.315,1.092 -0.57,0.691 -0.801,1.601 -0.63,2.48 l 28.328,145.751 c 0.274,1.409 1.509,2.427 2.945,2.427 l 31.5,0 c 0.896,0 1.745,-0.4 2.315,-1.091 0.57,-0.692 0.801,-1.601 0.63,-2.481 L -21.813,113 2.609,113 c 18.605,0 31.221,-3.28 38.569,-10.028 7.49,-6.884 9.827,-17.891 6.947,-32.719 L 34.945,2.428 C 34.671,1.018 33.437,0 32,0 L 0,0 Z"
-                          id="path3494"
-                          style="
-                            fill: #000000;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3496" transform="translate(293.6611,271.0571)">
-                        <path
-                          d="m 0,0 -31.5,0 c -2.873,0 -5.342,-2.036 -5.89,-4.855 l -28.328,-145.751 c -0.342,-1.759 0.12,-3.578 1.26,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.5,0 c 2.872,0 5.342,2.036 5.89,4.855 l 15.283,78.645 20.229,0 c 9.363,0 11.328,-2 11.407,-2.086 0.568,-0.611 1.315,-3.441 0.082,-9.781 l -12.531,-64.489 c -0.342,-1.759 0.12,-3.578 1.26,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 32,0 c 2.872,0 5.342,2.036 5.89,4.855 l 13.179,67.825 c 3.093,15.921 0.447,27.864 -7.861,35.5 -7.928,7.281 -21.208,10.82 -40.599,10.82 l -20.784,0 6.143,31.605 C 6.231,-5.386 5.77,-3.566 4.63,-2.184 3.49,-0.801 1.792,0 0,0 m 0,-6 -7.531,-38.75 28.062,0 c 17.657,0 29.836,-3.082 36.539,-9.238 6.703,-6.16 8.711,-16.141 6.032,-29.938 l -13.18,-67.824 -32,0 12.531,64.488 c 1.426,7.336 0.902,12.34 -1.574,15.008 -2.477,2.668 -7.746,4.004 -15.805,4.004 l -25.176,0 -16.226,-83.5 -31.5,0 L -31.5,-6 0,-6"
-                          id="path3498"
-                          style="
-                            fill: #ffffff;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3500" transform="translate(409.5498,145.3066)">
-                        <path
-                          d="m 0,0 c 12.065,0 21.072,2.225 26.771,6.611 5.638,4.34 9.532,11.861 11.574,22.353 1.903,9.806 1.178,16.653 -2.155,20.348 C 32.783,53.086 25.417,55 14.297,55 L -4.984,55 -15.673,0 0,0 Z m -63.062,-67.75 c -0.895,0 -1.745,0.4 -2.314,1.092 -0.57,0.691 -0.802,1.601 -0.631,2.48 L -37.679,81.573 C -37.404,82.982 -36.17,84 -34.733,84 L 26.32,84 C 45.509,84 59.79,78.79 68.768,68.513 77.793,58.183 80.579,43.742 77.051,25.592 75.613,18.198 73.144,11.331 69.709,5.183 66.27,-0.972 61.725,-6.667 56.198,-11.747 49.582,-17.939 42.094,-22.429 33.962,-25.071 25.959,-27.678 15.681,-29 3.414,-29 l -24.723,0 -7.057,-36.322 c -0.275,-1.41 -1.509,-2.428 -2.946,-2.428 l -31.75,0 z"
-                          id="path3502"
-                          style="
-                            fill: #000000;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3504" transform="translate(407.0391,197.3071)">
-                        <path
-                          d="M 0,0 16.808,0 C 30.229,0 34.891,-2.945 36.475,-4.7 39.104,-7.614 39.6,-13.758 37.91,-22.466 36.012,-32.217 32.493,-39.13 27.452,-43.012 22.29,-46.986 13.898,-49 2.511,-49 L -9.522,-49 0,0 Z m 28.831,35 -61.054,0 c -2.872,0 -5.341,-2.036 -5.889,-4.855 L -66.44,-115.606 c -0.342,-1.759 0.12,-3.578 1.259,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.75,0 c 2.872,0 5.342,2.036 5.89,4.855 l 6.587,33.895 22.249,0 c 12.582,0 23.174,1.372 31.479,4.077 8.541,2.775 16.401,7.481 23.356,13.986 5.752,5.291 10.488,11.23 14.078,17.655 3.591,6.427 6.171,13.594 7.668,21.302 3.715,19.105 0.697,34.403 -8.969,45.467 C 63.965,29.444 48.924,35 28.831,35 m -45.632,-90 19.312,0 c 12.801,0 22.336,2.411 28.601,7.234 6.267,4.824 10.492,12.875 12.688,24.157 2.102,10.832 1.145,18.476 -2.871,22.929 C 36.909,3.773 28.87,6 16.808,6 L -4.946,6 -16.801,-55 M 28.831,29 C 47.198,29 60.597,24.18 69.019,14.539 77.441,4.898 79.976,-8.559 76.616,-25.836 75.233,-32.953 72.894,-39.46 69.601,-45.355 66.304,-51.254 61.999,-56.648 56.679,-61.539 50.339,-67.472 43.296,-71.7 35.546,-74.218 27.796,-76.743 17.925,-78 5.925,-78 l -27.196,0 -7.53,-38.75 -31.75,0 28.328,145.75 61.054,0"
-                          id="path3506"
-                          style="
-                            fill: #ffffff;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-              <span class="skills--list__tittle">Bitrix</span>
-            </div>
+          <div class="skills-list left">
+              <div class="skills-list__row" data-category="html-css">
+                  <div class="skills-list__element" data-skill="html">
+                    
+                      <span class="skills--list__tittle">HTML</span>
+                      
+                  </div>
+                  <div class="skills-list__element" data-skill="css">
+                      <span class="skills--list__tittle">CSS</span>
+                  </div>
+                  <div class="skills-list__element" data-skill="bootstrap">
+                      <span class="skills--list__tittle">Bootstrap</span>
+                  </div>
+              </div>
+              <div class="skills-list__row" data-category="js">
+                  <div class="skills-list__element" data-skill="figma">
+                      <span class="skills--list__tittle">Figma</span>
+                  </div>
+                  <div class="skills-list__element" data-skill="js">
+                      <span class="skills--list__tittle">JS</span>
+                  </div>
+                  <div class="skills-list__element" data-skill="react">
+                      <span class="skills--list__tittle">React</span>
+                  </div>
+              </div>
+              <div class="skills-list__row" data-category="database">
+                  <div class="skills-list__element" data-skill="php">
+                      <span class="skills--list__tittle">Php</span>
+                  </div>
+                  <div class="skills-list__element" data-skill="google">
+                      <span class="skills--list__tittle">Google</span>
+                  </div>
+                  <div class="skills-list__element" data-skill="mysql">
+                      <span class="skills--list__tittle">Mysql</span>
+                  </div>
+              </div>
+              <div class="skills-list__row" data-category="database">
+                  <div class="skills-list__element" data-skill="postgresql">
+                      <span class="skills--list__tittle">Postgresql</span>
+                  </div>
+              </div>
           </div>
-          <div class="skills-list__row">
-            <div class="skills-list__element">
-              <svg
-                id="svg3430"
-                version="1.1"
-                viewBox="0 0 711.20123 383.5975"
-                width="711.20123"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:cc="http://creativecommons.org/ns#"
-                xmlns:dc="http://purl.org/dc/elements/1.1/"
-                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                xmlns:svg="http://www.w3.org/2000/svg"
-              >
-                <title id="title3510">Official PHP Logo</title>
-                <metadata id="metadata3436">
-                  <rdf:RDF>
-                    <cc:Work rdf:about="">
-                      <dc:format>image/svg+xml</dc:format>
-                      <dc:type
-                        rdf:resource="http://purl.org/dc/dcmitype/StillImage"
-                      />
-                      <dc:title>Official PHP Logo</dc:title>
-                      <dc:creator>
-                        <cc:Agent>
-                          <dc:title>Colin Viebrock</dc:title>
-                        </cc:Agent>
-                      </dc:creator>
-                      <dc:description />
-                      <dc:contributor>
-                        <cc:Agent>
-                          <dc:title />
-                        </cc:Agent>
-                      </dc:contributor>
-                      <cc:license
-                        rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"
-                      />
-                      <dc:rights>
-                        <cc:Agent>
-                          <dc:title
-                            >Copyright Colin Viebrock 1997 - All rights
-                            reserved.</dc:title
-                          >
-                        </cc:Agent>
-                      </dc:rights>
-                      <dc:date>1997</dc:date>
-                    </cc:Work>
-                    <cc:License
-                      rdf:about="http://creativecommons.org/licenses/by-sa/4.0/"
-                    >
-                      <cc:permits
-                        rdf:resource="http://creativecommons.org/ns#Reproduction"
-                      />
-                      <cc:permits
-                        rdf:resource="http://creativecommons.org/ns#Distribution"
-                      />
-                      <cc:requires
-                        rdf:resource="http://creativecommons.org/ns#Notice"
-                      />
-                      <cc:requires
-                        rdf:resource="http://creativecommons.org/ns#Attribution"
-                      />
-                      <cc:permits
-                        rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
-                      />
-                      <cc:requires
-                        rdf:resource="http://creativecommons.org/ns#ShareAlike"
-                      />
-                    </cc:License>
-                  </rdf:RDF>
-                </metadata>
-                <defs id="defs3434">
-                  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3444">
-                    <path
-                      d="M 11.52,162 C 11.52,81.677 135.307,16.561 288,16.561 l 0,0 c 152.693,0 276.481,65.116 276.481,145.439 l 0,0 c 0,80.322 -123.788,145.439 -276.481,145.439 l 0,0 C 135.307,307.439 11.52,242.322 11.52,162"
-                      id="path3446"
-                    />
-                  </clipPath>
-                  <radialGradient
-                    cx="0"
-                    cy="0"
-                    fx="0"
-                    fy="0"
-                    gradientTransform="matrix(363.05789,0,0,-363.05789,177.52002,256.30713)"
-                    gradientUnits="userSpaceOnUse"
-                    id="radialGradient3452"
-                    r="1"
-                    spreadMethod="pad"
-                  >
-                    <stop
-                      id="stop3454"
-                      offset="0"
-                      style="stop-opacity: 1; stop-color: #aeb2d5"
-                    />
-                    <stop
-                      id="stop3456"
-                      offset="0.3"
-                      style="stop-opacity: 1; stop-color: #aeb2d5"
-                    />
-                    <stop
-                      id="stop3458"
-                      offset="0.75"
-                      style="stop-opacity: 1; stop-color: #484c89"
-                    />
-                    <stop
-                      id="stop3460"
-                      offset="1"
-                      style="stop-opacity: 1; stop-color: #484c89"
-                    />
-                  </radialGradient>
-                  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3468">
-                    <path d="M 0,324 576,324 576,0 0,0 0,324 Z" id="path3470" />
-                  </clipPath>
-                  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3480">
-                    <path d="M 0,324 576,324 576,0 0,0 0,324 Z" id="path3482" />
-                  </clipPath>
-                </defs>
-                <g id="g3438" transform="matrix(1.25,0,0,-1.25,-4.4,394.29875)">
-                  <g id="g3440">
-                    <g clip-path="url(#clipPath3444)" id="g3442">
-                      <g id="g3448">
-                        <g id="g3450">
-                          <path
-                            d="M 11.52,162 C 11.52,81.677 135.307,16.561 288,16.561 l 0,0 c 152.693,0 276.481,65.116 276.481,145.439 l 0,0 c 0,80.322 -123.788,145.439 -276.481,145.439 l 0,0 C 135.307,307.439 11.52,242.322 11.52,162"
-                            id="path3462"
-                            style="fill: url(#radialGradient3452); stroke: none"
-                          />
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                  <g id="g3464">
-                    <g clip-path="url(#clipPath3468)" id="g3466">
-                      <g id="g3472" transform="translate(288,27.3594)">
-                        <path
-                          d="M 0,0 C 146.729,0 265.68,60.281 265.68,134.641 265.68,209 146.729,269.282 0,269.282 -146.729,269.282 -265.68,209 -265.68,134.641 -265.68,60.281 -146.729,0 0,0"
-                          id="path3474"
-                          style="
-                            fill: #777bb3;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                    </g>
-                  </g>
-                  <g id="g3476">
-                    <g clip-path="url(#clipPath3480)" id="g3478">
-                      <g id="g3484" transform="translate(161.7344,145.3066)">
-                        <path
-                          d="m 0,0 c 12.065,0 21.072,2.225 26.771,6.611 5.638,4.341 9.532,11.862 11.573,22.353 1.903,9.806 1.178,16.653 -2.154,20.348 C 32.783,53.086 25.417,55 14.297,55 L -4.984,55 -15.673,0 0,0 Z m -63.063,-67.75 c -0.895,0 -1.745,0.4 -2.314,1.092 -0.57,0.691 -0.801,1.601 -0.63,2.48 L -37.679,81.573 C -37.405,82.982 -36.17,84 -34.734,84 L 26.32,84 C 45.508,84 59.79,78.79 68.767,68.513 77.792,58.182 80.579,43.741 77.05,25.592 75.614,18.198 73.144,11.331 69.709,5.183 66.27,-0.972 61.725,-6.667 56.198,-11.747 49.582,-17.939 42.094,-22.429 33.962,-25.071 25.959,-27.678 15.681,-29 3.414,-29 l -24.722,0 -7.06,-36.322 c -0.274,-1.41 -1.508,-2.428 -2.944,-2.428 l -31.751,0 z"
-                          id="path3486"
-                          style="
-                            fill: #000000;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3488" transform="translate(159.2236,197.3071)">
-                        <path
-                          d="m 0,0 16.808,0 c 13.421,0 18.083,-2.945 19.667,-4.7 2.628,-2.914 3.124,-9.058 1.435,-17.767 C 36.012,-32.217 32.494,-39.13 27.452,-43.012 22.29,-46.986 13.898,-49 2.511,-49 L -9.523,-49 0,0 Z m 28.831,35 -61.055,0 c -2.872,0 -5.341,-2.036 -5.889,-4.855 l -28.328,-145.751 c -0.342,-1.759 0.12,-3.578 1.259,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.75,0 c 2.873,0 5.342,2.036 5.89,4.855 l 6.588,33.895 22.249,0 c 12.582,0 23.174,1.372 31.479,4.077 8.541,2.775 16.399,7.48 23.354,13.984 5.752,5.292 10.49,11.232 14.08,17.657 3.591,6.427 6.171,13.594 7.668,21.302 3.715,19.104 0.697,34.402 -8.969,45.466 C 63.965,29.444 48.923,35 28.831,35 m -45.633,-90 19.313,0 c 12.801,0 22.336,2.411 28.601,7.234 6.266,4.824 10.492,12.875 12.688,24.157 2.101,10.832 1.144,18.476 -2.871,22.929 C 36.909,3.773 28.87,6 16.808,6 L -4.946,6 -16.802,-55 M 28.831,29 C 47.198,29 60.597,24.18 69.019,14.539 77.44,4.898 79.976,-8.559 76.616,-25.836 75.233,-32.953 72.894,-39.46 69.601,-45.355 66.304,-51.254 61.999,-56.648 56.679,-61.539 50.339,-67.472 43.296,-71.7 35.546,-74.218 27.796,-76.743 17.925,-78 5.925,-78 l -27.196,0 -7.531,-38.75 -31.75,0 28.328,145.75 61.055,0"
-                          id="path3490"
-                          style="
-                            fill: #ffffff;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3492" transform="translate(311.583,116.3066)">
-                        <path
-                          d="m 0,0 c -0.896,0 -1.745,0.4 -2.314,1.092 -0.571,0.691 -0.802,1.6 -0.631,2.48 L 9.586,68.061 C 10.778,74.194 10.484,78.596 8.759,80.456 7.703,81.593 4.531,83.5 -4.848,83.5 L -27.55,83.5 -43.305,2.428 C -43.579,1.018 -44.814,0 -46.25,0 l -31.5,0 c -0.896,0 -1.745,0.4 -2.315,1.092 -0.57,0.691 -0.801,1.601 -0.63,2.48 l 28.328,145.751 c 0.274,1.409 1.509,2.427 2.945,2.427 l 31.5,0 c 0.896,0 1.745,-0.4 2.315,-1.091 0.57,-0.692 0.801,-1.601 0.63,-2.481 L -21.813,113 2.609,113 c 18.605,0 31.221,-3.28 38.569,-10.028 7.49,-6.884 9.827,-17.891 6.947,-32.719 L 34.945,2.428 C 34.671,1.018 33.437,0 32,0 L 0,0 Z"
-                          id="path3494"
-                          style="
-                            fill: #000000;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3496" transform="translate(293.6611,271.0571)">
-                        <path
-                          d="m 0,0 -31.5,0 c -2.873,0 -5.342,-2.036 -5.89,-4.855 l -28.328,-145.751 c -0.342,-1.759 0.12,-3.578 1.26,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.5,0 c 2.872,0 5.342,2.036 5.89,4.855 l 15.283,78.645 20.229,0 c 9.363,0 11.328,-2 11.407,-2.086 0.568,-0.611 1.315,-3.441 0.082,-9.781 l -12.531,-64.489 c -0.342,-1.759 0.12,-3.578 1.26,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 32,0 c 2.872,0 5.342,2.036 5.89,4.855 l 13.179,67.825 c 3.093,15.921 0.447,27.864 -7.861,35.5 -7.928,7.281 -21.208,10.82 -40.599,10.82 l -20.784,0 6.143,31.605 C 6.231,-5.386 5.77,-3.566 4.63,-2.184 3.49,-0.801 1.792,0 0,0 m 0,-6 -7.531,-38.75 28.062,0 c 17.657,0 29.836,-3.082 36.539,-9.238 6.703,-6.16 8.711,-16.141 6.032,-29.938 l -13.18,-67.824 -32,0 12.531,64.488 c 1.426,7.336 0.902,12.34 -1.574,15.008 -2.477,2.668 -7.746,4.004 -15.805,4.004 l -25.176,0 -16.226,-83.5 -31.5,0 L -31.5,-6 0,-6"
-                          id="path3498"
-                          style="
-                            fill: #ffffff;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3500" transform="translate(409.5498,145.3066)">
-                        <path
-                          d="m 0,0 c 12.065,0 21.072,2.225 26.771,6.611 5.638,4.34 9.532,11.861 11.574,22.353 1.903,9.806 1.178,16.653 -2.155,20.348 C 32.783,53.086 25.417,55 14.297,55 L -4.984,55 -15.673,0 0,0 Z m -63.062,-67.75 c -0.895,0 -1.745,0.4 -2.314,1.092 -0.57,0.691 -0.802,1.601 -0.631,2.48 L -37.679,81.573 C -37.404,82.982 -36.17,84 -34.733,84 L 26.32,84 C 45.509,84 59.79,78.79 68.768,68.513 77.793,58.183 80.579,43.742 77.051,25.592 75.613,18.198 73.144,11.331 69.709,5.183 66.27,-0.972 61.725,-6.667 56.198,-11.747 49.582,-17.939 42.094,-22.429 33.962,-25.071 25.959,-27.678 15.681,-29 3.414,-29 l -24.723,0 -7.057,-36.322 c -0.275,-1.41 -1.509,-2.428 -2.946,-2.428 l -31.75,0 z"
-                          id="path3502"
-                          style="
-                            fill: #000000;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                      <g id="g3504" transform="translate(407.0391,197.3071)">
-                        <path
-                          d="M 0,0 16.808,0 C 30.229,0 34.891,-2.945 36.475,-4.7 39.104,-7.614 39.6,-13.758 37.91,-22.466 36.012,-32.217 32.493,-39.13 27.452,-43.012 22.29,-46.986 13.898,-49 2.511,-49 L -9.522,-49 0,0 Z m 28.831,35 -61.054,0 c -2.872,0 -5.341,-2.036 -5.889,-4.855 L -66.44,-115.606 c -0.342,-1.759 0.12,-3.578 1.259,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.75,0 c 2.872,0 5.342,2.036 5.89,4.855 l 6.587,33.895 22.249,0 c 12.582,0 23.174,1.372 31.479,4.077 8.541,2.775 16.401,7.481 23.356,13.986 5.752,5.291 10.488,11.23 14.078,17.655 3.591,6.427 6.171,13.594 7.668,21.302 3.715,19.105 0.697,34.403 -8.969,45.467 C 63.965,29.444 48.924,35 28.831,35 m -45.632,-90 19.312,0 c 12.801,0 22.336,2.411 28.601,7.234 6.267,4.824 10.492,12.875 12.688,24.157 2.102,10.832 1.145,18.476 -2.871,22.929 C 36.909,3.773 28.87,6 16.808,6 L -4.946,6 -16.801,-55 M 28.831,29 C 47.198,29 60.597,24.18 69.019,14.539 77.441,4.898 79.976,-8.559 76.616,-25.836 75.233,-32.953 72.894,-39.46 69.601,-45.355 66.304,-51.254 61.999,-56.648 56.679,-61.539 50.339,-67.472 43.296,-71.7 35.546,-74.218 27.796,-76.743 17.925,-78 5.925,-78 l -27.196,0 -7.53,-38.75 -31.75,0 28.328,145.75 61.054,0"
-                          id="path3506"
-                          style="
-                            fill: #ffffff;
-                            fill-opacity: 1;
-                            fill-rule: nonzero;
-                            stroke: none;
-                          "
-                        />
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-              <span class="skills--list__tittle">Symfony</span>
-            </div>
+  
+          <div class="skill-card right" id="html-card">
+              <div class="skill-card__tittle">
+                  <span class="skill-card__name">HTML</span>
+              </div>
+              <div class="skill-card__progress">
+                  <span class="skill-card__progress-percent">80%</span>
+                  <div class="skill-card__progress-bar">
+                      <div style="width: 80%;"></div>
+                  </div>
+              </div>
+              <p class="skill-card__description">
+                  Хорошее знание HTML, позволяет создавать семантически правильные веб-страницы.
+              </p>
           </div>
-        </div>
+          
+          <div class="skill-card right" id="css-card">
+              <div class="skill-card__tittle">
+                  <span class="skill-card__name">CSS</span>
+              </div>
+              <div class="skill-card__progress">
+                  <span class="skill-card__progress-percent">75%</span>
+                  <div class="skill-card__progress-bar">
+                      <div style="width: 75%;"></div>
+                  </div>
+              </div>
+              <p class="skill-card__description">
+                  Опыт в использовании CSS для стилизации веб-страниц и создания адаптивного дизайна.
+              </p>
+          </div>
+          
 
-        <div class="skill-card right">
-          <div class="skill-card__tittle">
-            <!-- <img src="" alt="php" class="skill-card__image" /> -->
-            <svg
-              class="skill-card__image"
-              id="svg3430"
-              version="1.1"
-              viewBox="0 0 711.20123 383.5975"
-              width="711.20123"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:cc="http://creativecommons.org/ns#"
-              xmlns:dc="http://purl.org/dc/elements/1.1/"
-              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-              xmlns:svg="http://www.w3.org/2000/svg"
-            >
-              <title id="title3510">Official PHP Logo</title>
-              <metadata id="metadata3436">
-                <rdf:RDF>
-                  <cc:Work rdf:about="">
-                    <dc:format>image/svg+xml</dc:format>
-                    <dc:type
-                      rdf:resource="http://purl.org/dc/dcmitype/StillImage"
-                    />
-                    <dc:title>Official PHP Logo</dc:title>
-                    <dc:creator>
-                      <cc:Agent>
-                        <dc:title>Colin Viebrock</dc:title>
-                      </cc:Agent>
-                    </dc:creator>
-                    <dc:description />
-                    <dc:contributor>
-                      <cc:Agent>
-                        <dc:title />
-                      </cc:Agent>
-                    </dc:contributor>
-                    <cc:license
-                      rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"
-                    />
-                    <dc:rights>
-                      <cc:Agent>
-                        <dc:title
-                          >Copyright Colin Viebrock 1997 - All rights
-                          reserved.</dc:title
-                        >
-                      </cc:Agent>
-                    </dc:rights>
-                    <dc:date>1997</dc:date>
-                  </cc:Work>
-                  <cc:License
-                    rdf:about="http://creativecommons.org/licenses/by-sa/4.0/"
-                  >
-                    <cc:permits
-                      rdf:resource="http://creativecommons.org/ns#Reproduction"
-                    />
-                    <cc:permits
-                      rdf:resource="http://creativecommons.org/ns#Distribution"
-                    />
-                    <cc:requires
-                      rdf:resource="http://creativecommons.org/ns#Notice"
-                    />
-                    <cc:requires
-                      rdf:resource="http://creativecommons.org/ns#Attribution"
-                    />
-                    <cc:permits
-                      rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
-                    />
-                    <cc:requires
-                      rdf:resource="http://creativecommons.org/ns#ShareAlike"
-                    />
-                  </cc:License>
-                </rdf:RDF>
-              </metadata>
-              <defs id="defs3434">
-                <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3444">
-                  <path
-                    d="M 11.52,162 C 11.52,81.677 135.307,16.561 288,16.561 l 0,0 c 152.693,0 276.481,65.116 276.481,145.439 l 0,0 c 0,80.322 -123.788,145.439 -276.481,145.439 l 0,0 C 135.307,307.439 11.52,242.322 11.52,162"
-                    id="path3446"
-                  />
-                </clipPath>
-                <radialGradient
-                  cx="0"
-                  cy="0"
-                  fx="0"
-                  fy="0"
-                  gradientTransform="matrix(363.05789,0,0,-363.05789,177.52002,256.30713)"
-                  gradientUnits="userSpaceOnUse"
-                  id="radialGradient3452"
-                  r="1"
-                  spreadMethod="pad"
-                >
-                  <stop
-                    id="stop3454"
-                    offset="0"
-                    style="stop-opacity: 1; stop-color: #aeb2d5"
-                  />
-                  <stop
-                    id="stop3456"
-                    offset="0.3"
-                    style="stop-opacity: 1; stop-color: #aeb2d5"
-                  />
-                  <stop
-                    id="stop3458"
-                    offset="0.75"
-                    style="stop-opacity: 1; stop-color: #484c89"
-                  />
-                  <stop
-                    id="stop3460"
-                    offset="1"
-                    style="stop-opacity: 1; stop-color: #484c89"
-                  />
-                </radialGradient>
-                <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3468">
-                  <path d="M 0,324 576,324 576,0 0,0 0,324 Z" id="path3470" />
-                </clipPath>
-                <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3480">
-                  <path d="M 0,324 576,324 576,0 0,0 0,324 Z" id="path3482" />
-                </clipPath>
-              </defs>
-              <g id="g3438" transform="matrix(1.25,0,0,-1.25,-4.4,394.29875)">
-                <g id="g3440">
-                  <g clip-path="url(#clipPath3444)" id="g3442">
-                    <g id="g3448">
-                      <g id="g3450">
-                        <path
-                          d="M 11.52,162 C 11.52,81.677 135.307,16.561 288,16.561 l 0,0 c 152.693,0 276.481,65.116 276.481,145.439 l 0,0 c 0,80.322 -123.788,145.439 -276.481,145.439 l 0,0 C 135.307,307.439 11.52,242.322 11.52,162"
-                          id="path3462"
-                          style="fill: url(#radialGradient3452); stroke: none"
-                        />
-                      </g>
-                    </g>
-                  </g>
-                </g>
-                <g id="g3464">
-                  <g clip-path="url(#clipPath3468)" id="g3466">
-                    <g id="g3472" transform="translate(288,27.3594)">
-                      <path
-                        d="M 0,0 C 146.729,0 265.68,60.281 265.68,134.641 265.68,209 146.729,269.282 0,269.282 -146.729,269.282 -265.68,209 -265.68,134.641 -265.68,60.281 -146.729,0 0,0"
-                        id="path3474"
-                        style="
-                          fill: #777bb3;
-                          fill-opacity: 1;
-                          fill-rule: nonzero;
-                          stroke: none;
-                        "
-                      />
-                    </g>
-                  </g>
-                </g>
-                <g id="g3476">
-                  <g clip-path="url(#clipPath3480)" id="g3478">
-                    <g id="g3484" transform="translate(161.7344,145.3066)">
-                      <path
-                        d="m 0,0 c 12.065,0 21.072,2.225 26.771,6.611 5.638,4.341 9.532,11.862 11.573,22.353 1.903,9.806 1.178,16.653 -2.154,20.348 C 32.783,53.086 25.417,55 14.297,55 L -4.984,55 -15.673,0 0,0 Z m -63.063,-67.75 c -0.895,0 -1.745,0.4 -2.314,1.092 -0.57,0.691 -0.801,1.601 -0.63,2.48 L -37.679,81.573 C -37.405,82.982 -36.17,84 -34.734,84 L 26.32,84 C 45.508,84 59.79,78.79 68.767,68.513 77.792,58.182 80.579,43.741 77.05,25.592 75.614,18.198 73.144,11.331 69.709,5.183 66.27,-0.972 61.725,-6.667 56.198,-11.747 49.582,-17.939 42.094,-22.429 33.962,-25.071 25.959,-27.678 15.681,-29 3.414,-29 l -24.722,0 -7.06,-36.322 c -0.274,-1.41 -1.508,-2.428 -2.944,-2.428 l -31.751,0 z"
-                        id="path3486"
-                        style="
-                          fill: #000000;
-                          fill-opacity: 1;
-                          fill-rule: nonzero;
-                          stroke: none;
-                        "
-                      />
-                    </g>
-                    <g id="g3488" transform="translate(159.2236,197.3071)">
-                      <path
-                        d="m 0,0 16.808,0 c 13.421,0 18.083,-2.945 19.667,-4.7 2.628,-2.914 3.124,-9.058 1.435,-17.767 C 36.012,-32.217 32.494,-39.13 27.452,-43.012 22.29,-46.986 13.898,-49 2.511,-49 L -9.523,-49 0,0 Z m 28.831,35 -61.055,0 c -2.872,0 -5.341,-2.036 -5.889,-4.855 l -28.328,-145.751 c -0.342,-1.759 0.12,-3.578 1.259,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.75,0 c 2.873,0 5.342,2.036 5.89,4.855 l 6.588,33.895 22.249,0 c 12.582,0 23.174,1.372 31.479,4.077 8.541,2.775 16.399,7.48 23.354,13.984 5.752,5.292 10.49,11.232 14.08,17.657 3.591,6.427 6.171,13.594 7.668,21.302 3.715,19.104 0.697,34.402 -8.969,45.466 C 63.965,29.444 48.923,35 28.831,35 m -45.633,-90 19.313,0 c 12.801,0 22.336,2.411 28.601,7.234 6.266,4.824 10.492,12.875 12.688,24.157 2.101,10.832 1.144,18.476 -2.871,22.929 C 36.909,3.773 28.87,6 16.808,6 L -4.946,6 -16.802,-55 M 28.831,29 C 47.198,29 60.597,24.18 69.019,14.539 77.44,4.898 79.976,-8.559 76.616,-25.836 75.233,-32.953 72.894,-39.46 69.601,-45.355 66.304,-51.254 61.999,-56.648 56.679,-61.539 50.339,-67.472 43.296,-71.7 35.546,-74.218 27.796,-76.743 17.925,-78 5.925,-78 l -27.196,0 -7.531,-38.75 -31.75,0 28.328,145.75 61.055,0"
-                        id="path3490"
-                        style="
-                          fill: #ffffff;
-                          fill-opacity: 1;
-                          fill-rule: nonzero;
-                          stroke: none;
-                        "
-                      />
-                    </g>
-                    <g id="g3492" transform="translate(311.583,116.3066)">
-                      <path
-                        d="m 0,0 c -0.896,0 -1.745,0.4 -2.314,1.092 -0.571,0.691 -0.802,1.6 -0.631,2.48 L 9.586,68.061 C 10.778,74.194 10.484,78.596 8.759,80.456 7.703,81.593 4.531,83.5 -4.848,83.5 L -27.55,83.5 -43.305,2.428 C -43.579,1.018 -44.814,0 -46.25,0 l -31.5,0 c -0.896,0 -1.745,0.4 -2.315,1.092 -0.57,0.691 -0.801,1.601 -0.63,2.48 l 28.328,145.751 c 0.274,1.409 1.509,2.427 2.945,2.427 l 31.5,0 c 0.896,0 1.745,-0.4 2.315,-1.091 0.57,-0.692 0.801,-1.601 0.63,-2.481 L -21.813,113 2.609,113 c 18.605,0 31.221,-3.28 38.569,-10.028 7.49,-6.884 9.827,-17.891 6.947,-32.719 L 34.945,2.428 C 34.671,1.018 33.437,0 32,0 L 0,0 Z"
-                        id="path3494"
-                        style="
-                          fill: #000000;
-                          fill-opacity: 1;
-                          fill-rule: nonzero;
-                          stroke: none;
-                        "
-                      />
-                    </g>
-                    <g id="g3496" transform="translate(293.6611,271.0571)">
-                      <path
-                        d="m 0,0 -31.5,0 c -2.873,0 -5.342,-2.036 -5.89,-4.855 l -28.328,-145.751 c -0.342,-1.759 0.12,-3.578 1.26,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.5,0 c 2.872,0 5.342,2.036 5.89,4.855 l 15.283,78.645 20.229,0 c 9.363,0 11.328,-2 11.407,-2.086 0.568,-0.611 1.315,-3.441 0.082,-9.781 l -12.531,-64.489 c -0.342,-1.759 0.12,-3.578 1.26,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 32,0 c 2.872,0 5.342,2.036 5.89,4.855 l 13.179,67.825 c 3.093,15.921 0.447,27.864 -7.861,35.5 -7.928,7.281 -21.208,10.82 -40.599,10.82 l -20.784,0 6.143,31.605 C 6.231,-5.386 5.77,-3.566 4.63,-2.184 3.49,-0.801 1.792,0 0,0 m 0,-6 -7.531,-38.75 28.062,0 c 17.657,0 29.836,-3.082 36.539,-9.238 6.703,-6.16 8.711,-16.141 6.032,-29.938 l -13.18,-67.824 -32,0 12.531,64.488 c 1.426,7.336 0.902,12.34 -1.574,15.008 -2.477,2.668 -7.746,4.004 -15.805,4.004 l -25.176,0 -16.226,-83.5 -31.5,0 L -31.5,-6 0,-6"
-                        id="path3498"
-                        style="
-                          fill: #ffffff;
-                          fill-opacity: 1;
-                          fill-rule: nonzero;
-                          stroke: none;
-                        "
-                      />
-                    </g>
-                    <g id="g3500" transform="translate(409.5498,145.3066)">
-                      <path
-                        d="m 0,0 c 12.065,0 21.072,2.225 26.771,6.611 5.638,4.34 9.532,11.861 11.574,22.353 1.903,9.806 1.178,16.653 -2.155,20.348 C 32.783,53.086 25.417,55 14.297,55 L -4.984,55 -15.673,0 0,0 Z m -63.062,-67.75 c -0.895,0 -1.745,0.4 -2.314,1.092 -0.57,0.691 -0.802,1.601 -0.631,2.48 L -37.679,81.573 C -37.404,82.982 -36.17,84 -34.733,84 L 26.32,84 C 45.509,84 59.79,78.79 68.768,68.513 77.793,58.183 80.579,43.742 77.051,25.592 75.613,18.198 73.144,11.331 69.709,5.183 66.27,-0.972 61.725,-6.667 56.198,-11.747 49.582,-17.939 42.094,-22.429 33.962,-25.071 25.959,-27.678 15.681,-29 3.414,-29 l -24.723,0 -7.057,-36.322 c -0.275,-1.41 -1.509,-2.428 -2.946,-2.428 l -31.75,0 z"
-                        id="path3502"
-                        style="
-                          fill: #000000;
-                          fill-opacity: 1;
-                          fill-rule: nonzero;
-                          stroke: none;
-                        "
-                      />
-                    </g>
-                    <g id="g3504" transform="translate(407.0391,197.3071)">
-                      <path
-                        d="M 0,0 16.808,0 C 30.229,0 34.891,-2.945 36.475,-4.7 39.104,-7.614 39.6,-13.758 37.91,-22.466 36.012,-32.217 32.493,-39.13 27.452,-43.012 22.29,-46.986 13.898,-49 2.511,-49 L -9.522,-49 0,0 Z m 28.831,35 -61.054,0 c -2.872,0 -5.341,-2.036 -5.889,-4.855 L -66.44,-115.606 c -0.342,-1.759 0.12,-3.578 1.259,-4.961 1.14,-1.383 2.838,-2.183 4.63,-2.183 l 31.75,0 c 2.872,0 5.342,2.036 5.89,4.855 l 6.587,33.895 22.249,0 c 12.582,0 23.174,1.372 31.479,4.077 8.541,2.775 16.401,7.481 23.356,13.986 5.752,5.291 10.488,11.23 14.078,17.655 3.591,6.427 6.171,13.594 7.668,21.302 3.715,19.105 0.697,34.403 -8.969,45.467 C 63.965,29.444 48.924,35 28.831,35 m -45.632,-90 19.312,0 c 12.801,0 22.336,2.411 28.601,7.234 6.267,4.824 10.492,12.875 12.688,24.157 2.102,10.832 1.145,18.476 -2.871,22.929 C 36.909,3.773 28.87,6 16.808,6 L -4.946,6 -16.801,-55 M 28.831,29 C 47.198,29 60.597,24.18 69.019,14.539 77.441,4.898 79.976,-8.559 76.616,-25.836 75.233,-32.953 72.894,-39.46 69.601,-45.355 66.304,-51.254 61.999,-56.648 56.679,-61.539 50.339,-67.472 43.296,-71.7 35.546,-74.218 27.796,-76.743 17.925,-78 5.925,-78 l -27.196,0 -7.53,-38.75 -31.75,0 28.328,145.75 61.054,0"
-                        id="path3506"
-                        style="
-                          fill: #ffffff;
-                          fill-opacity: 1;
-                          fill-rule: nonzero;
-                          stroke: none;
-                        "
-                      />
-                    </g>
-                  </g>
-                </g>
-              </g>
-            </svg>
-            <span class="skill-card__name">Php</span>
-          </div>
-          <div class="skill-card__progress">
-            <span class="skill-card__progress-percent">15%</span>
-            <div class="skill-card__progress-bar">
-              <div></div>
+
+
+
+          <div class="skill-card right" id="figma-card">
+            <div class="skill-card__tittle">
+                <span class="skill-card__name">JS</span>
             </div>
-          </div>
-          <p class="skill-card__description">
-            Я не люблю php. Это старый и бесполезный язык программирования,
-            который не дает разработчику то, что ему нужно.Он ужасен!
-          </p>
+            <div class="skill-card__progress">
+                <span class="skill-card__progress-percent">75%</span>
+                <div class="skill-card__progress-bar">
+                    <div style="width: 75%;"></div>
+                </div>
+            </div>
+            <p class="skill-card__description">
+                Опыт в использовании js для стилизации веб-страниц и создания адаптивного дизайна.
+            </p>
         </div>
+          <!-- Add similar skill-card divs for each skill with unique ids -->
+          
       </div>
-    </section>
+  </section>
     <!-- секция работа -->
-    <section class="work section-gray" id="work">
-      <h2 class="second-tittle">Работа</h2>
+    <section class="work section-gray observer-section" id="work">
+      <h2 class="second-tittle translate"  data-ru="Работа" data-en="Work">Работа</h2>
       <div class="work-wrapper block-center">
         <div class="work-element work-element__animation left" data-year="2019">
           <div class="work-element__content">
-            <p class="work-element__tittle bold">Раздача листовок</p>
-            <p class="work-element__description">декабрь 2019 - май 2019</p>
-            <p class="work-element__block-tittle bold">Навыки</p>
+            <p class="work-element__tittle bold translate" data-ru="Раздача листовок" data-en="Distribution of leaflets" >Раздача листовок</p>
+            <p class="work-element__description translate" data-ru="декабрь 2019 - май 2019" data-en="december 2019 - may 2019" >декабрь 2019 - май 2019</p>
+            <p class="work-element__block-tittle bold translate" data-ru="Навыки" data-en="Skills" >Навыки</p>
             <ul class="work-element__skills">
-              <li class="work-element__skills-element">Коммуникабельность</li>
-              <li class="work-element__skills-element">Стрессоустойчивость</li>
-              <li class="work-element__skills-element">Активность</li>
-              <li class="work-element__skills-element">Внимательность</li>
+              <li class="work-element__skills-element translate" data-ru="Коммуникабельность" data-en="Communication">Коммуникабельность</li>
+              <li class="work-element__skills-element translate" data-ru="Стрессоустойчивость" data-en="Stress resistance">Стрессоустойчивость</li>
+              <li class="work-element__skills-element translate" data-ru="Активность" data-en="Activity">Активность</li>
+              <li class="work-element__skills-element translate" data-ru="Внимательность" data-en="Attentiveness">Внимательность</li>
             </ul>
           </div>
         </div>
@@ -1489,27 +449,29 @@
           data-year="2021"
         >
           <div class="work-element__content">
-            <p class="work-element__tittle bold">Официантка</p>
-            <p class="work-element__description">август 2021 - сентябрь 2021</p>
-            <p class="work-element__block-tittle bold">Навыки</p>
+            <p class="work-element__tittle bold translate" data-ru="Официантка" data-en="Waitress">Официантка</p>
+            <p class="work-element__description translate" data-ru="август 2021 - сентябрь 2021" data-en="august 2021 - september 2021">август 2021 - сентябрь 2021</p>
+            <p class="work-element__block-tittle bold translate" data-ru="Навыки" data-en="Skills">Навыки</p>
             <ul class="work-element__skills">
-              <li class="work-element__skills-element">Доброжелательность</li>
-              <li class="work-element__skills-element">Стрессоустойчивость</li>
-              <li class="work-element__skills-element">Активность</li>
-              <li class="work-element__skills-element">Аккуратность</li>
+              <li class="work-element__skills-element translate" data-ru="Доброжелательность" data-en="Benevolence">Доброжелательность</li>
+              <li class="work-element__skills-element translate" data-ru="Стрессоустойчивость" data-en="Stress resistance">Стрессоустойчивость</li>
+              <li class="work-element__skills-element translate" data-ru="Активность" data-en="Activity">Активность</li>
+              <li class="work-element__skills-element translate" data-ru="Аккуратность" data-en="Neatness">Аккуратность</li>
             </ul>
           </div>
         </div>
         <div class="work-element work-element__animation left" data-year="2023">
           <div class="work-element__content">
-            <p class="work-element__tittle bold">Сайт на заказ</p>
-            <p class="work-element__description">май 2023-июль 2023</p>
-            <p class="work-element__block-tittle bold">Проект</p>
+            <p class="work-element__tittle bold  translate" data-ru="Сайт на заказ" data-en="Custom website">Сайт на заказ</p>
+            <p class="work-element__description translate" data-ru="май 2023-июль 2023" data-en="may 2023-july 2023">май 2023-июль 2023</p>
+            <p class="work-element__block-tittle bold translate" data-ru="Проект" data-en="Project">Проект</p>
             <ul class="work-element__projects">
               <li class="work-element__projects-element work-project">
-                <span class="work-project__tittle">Сайт Bruskoff</span>
+                <span class="work-project__tittle translate" data-ru="Сайт Bruskoff" data-en="Site Bruskoff">Сайт Bruskoff</span>
                 <div class="work-tooltip">
-                  <p class="work-project__description">
+                  <p class="work-project__description translate" data-ru="Вёрстка, поддержка и раскрутка сайта bruskoff.ru (сейчас
+                    недоступен)" data-en="Layout, support and promotion of the site bruskoff.ru (currently
+                    unavailable)">
                     Вёрстка, поддержка и раскрутка сайта bruskoff.ru (сейчас
                     недоступен)
                   </p>
@@ -1532,23 +494,25 @@
           data-year="2024"
         >
           <div class="work-element__content">
-            <p class="work-element__tittle bold">Курсовой проект</p>
-            <p class="work-element__description">февраль 2024 - май 2024</p>
+            <p class="work-element__tittle bold translate" data-ru="Курсовой проект" data-en="Course project">Курсовой проект</p>
+            <p class="work-element__description translate" data-ru="февраль 2024 - май 2024" data-en="february 2024 - may 2024">февраль 2024 - май 2024</p>
 
-            <p class="work-element__block-tittle bold">Проект</p>
+            <p class="work-element__block-tittle bold translate" data-ru="Проект" data-en="Project">Проект</p>
             <ul class="work-element__projects">
               <li class="work-element__projects-element work-project">
-                <span class="work-project__tittle">Сайт Trening</span>
+                <span class="work-project__tittle translate" data-ru="Сайт Trening" data-en="Site  Trening">Сайт Trening</span>
                 <div class="work-tooltip">
-                  <p class="work-project__description">
-                    Вёрстка, поддержка и раскрутка сайта bruskoff.ru (сейчас
+                  <p class="work-project__description translate" data-ru="Вёрстка, поддержка и раскрутка сайта trening.ru (сейчас
+                  недоступен)" data-en="Layout, support and promotion of the site trening.ru (currently
+                  unavailable)">
+                    Вёрстка, поддержка и раскрутка сайта trening.ru (сейчас
                     недоступен)
                   </p>
                 </div>
               </li>
             </ul>
 
-            <p class="work-element__block-tittle bold">Навыки</p>
+            <p class="work-element__block-tittle bold translate">Навыки</p>
             <ul class="work-element__skills">
               <li class="work-element__skills-element">react</li>
               <li class="work-element__skills-element">js</li>
@@ -1563,34 +527,52 @@
       </div>
     </section>
     <!-- секция интересы  -->
-    <section class="interests" id="interests">
-      <h2 class="second-tittle">Интересы</h2>
+    <section class="interests observer-section" id="interests">
+      <h2 class="second-tittle translate" data-ru="Интересы" data-en="Interests" >Интересы</h2>
 
       <div class="interests__lists">
         <div class="interest-wrapper">
           <img src="/img/cooking.jpg" alt="" class="interest-image" />
-          <p class="interest-title bold">Готовка</p>
-          <p class="interest-text">
+          <p class="interest-title bold  translate" data-ru="Готовка" data-en="Cooking">Готовка</p>
+          <p class="interest-text translate" data-ru="Я очень люблю готовить, включаю на фон сериал и кайфую от процесса
+          создания очередных чудесных макарон с сосисками. Ну, а если
+          серьезно, я умею готовить абсолютно все, начиная от супов,
+          заканчивая тортиками. Когда есть желание и время для разбора
+          рецепта, то никакие сложности не помеха." data-en="I really love cooking, I turn on the TV series in the background and get high from the process
+          of creating another wonderful pasta with sausages. Well,
+          seriously, I can cook absolutely everything, from soups
+          to cakes. When there is a desire and time to analyze
+          the recipe, then no difficulties are a hindrance.">
             Я очень люблю готовить, включаю на фон сериал и кайфую от процесса
             создания очередных чудесных макарон с сосисками. Ну, а если
             серьезно, я умею готовить абсолютно все, начиная от супов,
             заканчивая тортиками. Когда есть желание и время для разбора
             рецепта, то никакие сложности не помеха.
           </p>
-          <p class="interest-text">
+          <p class="interest-text translate" data-ru="По окончании процесса особую радость приносит похвала от любимых
+          людей, которые пробуют мои блюда и восхищаются ими." data-en="At the end of the process, praise from loved
+          ones who taste and admire my dishes brings special joy.">
             По окончании процесса особую радость приносит похвала от любимых
             людей, которые пробуют мои блюда и восхищаются ими.
           </p>
         </div>
         <div class="interest-wrapper">
           <img src="/img/blog.jpg" alt="" class="interest-image" />
-          <p class="interest-title bold">Блог</p>
-          <p class="interest-text">
+          <p class="interest-title bold translate" data-ru="Блог" data-en="Blog">Блог</p>
+          <p class="interest-text translate" data-ru="Снимать ролики я начала еще в далеком 2015 и по сей день мечтаю
+          набрать свою аудиторию, стать знаменитой, ходить на различные
+          интервью и рассказывать о своей жизни." data-en="I started shooting videos back in 2015 and I still dream about it
+          gain your audience, become famous, go to various
+         interviews and talk about your life.">
             Снимать ролики я начала еще в далеком 2015 и по сей день мечтаю
             набрать свою аудиторию, стать знаменитой, ходить на различные
             интервью и рассказывать о своей жизни.
           </p>
-          <p class="interest-text">
+          <p class="interest-text translate" data-ru="Сейчас же моя тематика блога - это лайф, я делюсь своими
+          рецептами(которые проверены годами), делюсь своими находками из
+          хозяйственных магазинов, а также из секондов и барахолок." data-en="Now my blog topic is life, I share my
+          recipes(which have been tested for years), I share my findings from
+          hardware stores, as well as from second-hand shops and flea markets.">
             Сейчас же моя тематика блога - это лайф, я делюсь своими
             рецептами(которые проверены годами), делюсь своими находками из
             хозяйственных магазинов, а также из секондов и барахолок.
@@ -1598,13 +580,25 @@
         </div>
         <div class="interest-wrapper">
           <img src="/img/dising.jpg" alt="" class="interest-image" />
-          <p class="interest-title bold">Дизайн</p>
-          <p class="interest-text">
+          <p class="interest-title bold translate"  data-ru="Дизайн" data-en="Design">Дизайн</p>
+          <p class="interest-text translate" data-ru="Веб-дизайном я занялась впервые, когда попробовала сверстать сама
+          свой первый сайт. Тогда то я и поняла, что мне нравится создавать
+          разные кнопочки, подбирать цвета, позиционировать их." data-en="I started web design for the first time when I tried to design
+          my first website myself. That's when I realized that I like to create
+          different buttons, select colors, position them.">
             Веб-дизайном я занялась впервые, когда попробовала сверстать сама
             свой первый сайт. Тогда то я и поняла, что мне нравится создавать
             разные кнопочки, подбирать цвета, позиционировать их.
           </p>
-          <p class="interest-text">
+          <p class="interest-text translate" data-ru=" Я неоднократно проходила бесплатные интенсивы у Логомашины. А потом
+          мне подарили полное обучение на курс веб-дизайнер с 0 до pro, на нем
+          я просматривала лекции и делала различные работы. По окончанию
+          курсов я получила диплом, я считаю, это чудесное дополнение к моей
+          основной профессии." data-en="I have repeatedly taken free intensive courses at the Logomachine. And then
+          I was given a full training course in web designer from 0 to pro,
+          where I watched lectures and did various works. At the end
+          of the course, I received a diploma, I think it is a wonderful addition to my
+          main profession.">
             Я неоднократно проходила бесплатные интенсивы у Логомашины. А потом
             мне подарили полное обучение на курс веб-дизайнер с 0 до pro, на нем
             я просматривала лекции и делала различные работы. По окончанию
@@ -1614,32 +608,50 @@
         </div>
         <div class="interest-wrapper">
           <img src="/img/dog.jpg" alt="" class="interest-image" />
-          <p class="interest-title bold">Моя собака</p>
+          <p class="interest-title bold translate" data-ru="Моя собака" data-en="My dog">Моя собака</p>
 
-          <p class="interest-text">
+          <p class="interest-text translate" data-ru="У меня есть собака. Он мой самый верный друг, его зовут Арчи, порода
+          Йокширский-терьер, он очень нежный, ласковый, любящий, самый лучший
+          мальчик на свете." data-en="I have a dog. He is my most loyal friend, his name is Archie, a breed
+          The Yockshire Terrier, he is very gentle, affectionate, loving, the best
+         boy in the world.">
             У меня есть собака. Он мой самый верный друг, его зовут Арчи, порода
             Йокширский-терьер, он очень нежный, ласковый, любящий, самый лучший
             мальчик на свете.
           </p>
-          <p class="interest-text">
+          <p class="interest-text translate"  data-ru="Ему 6 лет, мы пережили с ним очень многое, я уже не представляю свою
+          жизнь без него. Мне не сложно вставать по утрам и гулять с ним. Я
+          его очень сильно люблю и никогда не дам в лбиду моего пушистика." data-en="He is 6 years old, we have been through a lot with him, I can no longer imagine my
+          life without him. It's not difficult for me to get up in the morning and walk with him. I
+          love him very much and I will never give my fuzzy in the forehead.">
             Ему 6 лет, мы пережили с ним очень многое, я уже не представляю свою
             жизнь без него. Мне не сложно вставать по утрам и гулять с ним. Я
             его очень сильно люблю и никогда не дам в лбиду моего пушистика.
           </p>
-          <p class="interest-text">
+          <p class="interest-text translate"  data-ru="Еще он любит спать в шкафу, таскать свою игрушку по всей квартире, а
+          также тявкать, когда звонят в дверь, он очень забавный и милый." data-en="He also likes to sleep in the closet, carry his toy around the apartment, and
+          yap when the doorbell rings, he is very funny and cute.">
             Еще он любит спать в шкафу, таскать свою игрушку по всей квартире, а
             также тявкать, когда звонят в дверь, он очень забавный и милый.
           </p>
         </div>
         <div class="interest-wrapper">
           <img src="/img/film.jpg" alt="" class="interest-image" />
-          <p class="interest-title bold">Кино</p>
-          <p class="interest-text">
+          <p class="interest-title bold translate" data-ru="Кино" data-en="Cinema" >Кино</p>
+          <p class="interest-text translate" data-ru=" Мне кажется, что это неотъемлемая часть моей жизни, ведб раньше я
+          училась на актерском и даже поступала на актрису, именно поэтому
+          меня тянет на творческие съемки." data-en="It seems to me that this is an integral part of my life, because I used to
+          I studied acting and even enrolled as an actress, which is why
+         I'm drawn to creative shooting." >
             Мне кажется, что это неотъемлемая часть моей жизни, ведб раньше я
             училась на актерском и даже поступала на актрису, именно поэтому
             меня тянет на творческие съемки.
           </p>
-          <p class="interest-text">
+          <p class="interest-text translate" data-ru="Когда я чем-то занимаюсь, я обязательно включаю какой-нибудь сериал
+          или кино на фон, чтобы было не так одиноко чистить картошку или
+          писать лекции." data-en="When I'm doing something, I always turn on some kind of TV series.
+          or a movie in the background, so that it would not be so lonely to peel potatoes or
+         write lectures.">
             Когда я чем-то занимаюсь, я обязательно включаю какой-нибудь сериал
             или кино на фон, чтобы было не так одиноко чистить картошку или
             писать лекции.
@@ -1647,17 +659,25 @@
         </div>
         <div class="interest-wrapper">
           <img src="/img/book.jpg" alt="" class="interest-image" />
-          <p class="interest-title bold">Книги</p>
-          <p class="interest-text">
+          <p class="interest-title bold translate" data-ru="Книги" data-en="Books">Книги</p>
+          <p class="interest-text translate" data-ru="Книги - это отдельная любовь. Когда ты погружаешься с головой в
+          другой мир, ты становишься его частью, ощущение, что ты проживаешь и
+          радость, и боль, и любовь, и горе вместе с главными героями." data-en="Books are a separate love. When you plunge headlong into
+          another world, you become a part of it, the feeling that you are living
+          joy, pain, love, and grief together with the main characters." >
             Книги - это отдельная любовь. Когда ты погружаешься с головой в
             другой мир, ты становишься его частью, ощущение, что ты проживаешь и
             радость, и боль, и любовь, и горе вместе с главными героями.
           </p>
-          <p class="interest-text">
+          <p class="interest-text translate " data-ru="Книга дает возможность отвлечься от рутины, от своих проблем в
+          жизни, она дает возможность отдохнуть от суеты." data-en="The book gives you the opportunity to escape from the routine, from your problems in
+          life, it gives you the opportunity to take a break from the hustle and bustle." >
             Книга дает возможность отвлечься от рутины, от своих проблем в
             жизни, она дает возможность отдохнуть от суеты.
           </p>
-          <p class="interest-text">
+          <p class="interest-text translate "data-ru="Я люблю детективы Майка Омера, любовные истории Анны Джейн и Эммы
+          Скотт, это мои любимые писатели." data-en="I love Mike Omer's detective stories, Anna Jane and Emma's love stories
+          Scott, these are my favorite writers." >
             Я люблю детективы Майка Омера, любовные истории Анны Джейн и Эммы
             Скотт, это мои любимые писатели.
           </p>
@@ -1665,11 +685,13 @@
       </div>
     </section>
     <!-- секция книги -->
-    <section class="books section-gray block-center" id="books">
-      <h2 class="second-tittle">Прочитанные книги</h2>
-      <p class="section-description">
+    <section class="books section-gray block-center observer-section" id="books">
+      <h2 class="second-tittle translate" data-ru="Прочитанные книги" data-en="Books read" >Прочитанные книги</h2>
+      <p class="section-description translate" data-ru="Тут указаны не все прочитанные мной книги, а только те книги, которые
+      произвели на меня наибольшее впечатление." data-en="Not all the books I have read are listed here, but only those books that
+      made the greatest impression on me.">
         Тут указаны не все прочитанные мной книги, а только те книги, которые
-        произвели на меня наибольшее впечатление
+        произвели на меня наибольшее впечатление.
       </p>
       <div class="book-list slider">
         <input
@@ -1739,19 +761,20 @@
       </div>
     </section>
     <!-- секция обратная связь -->
-    <section class="contact-me" id="contact-me">
-      <div class="contact-me__wrapper blur">
-        <h2 class="second-tittle">Обратная связь</h2>
+    <section class="contact-me observer-section observer-section" id="contact-me">
+      <!-- <div class="contact-me__wrapper blur"> -->
+        <h2 class="second-tittle translate" data-ru="Обратная связь" data-en="Contact-me" >Обратная связь</h2>
         <form action="" class="contact-me__form">
           <!-- для каждого поля ввода есть какой-то заголовок он называется лейбл, само поле ввода это инпут -->
           <div class="input-wrapper left">
-            <label for="name" class="label bold">Имя</label>
+            <label for="name" class="label bold translate" data-ru="Имя" data-en="Name" >Имя</label>
 
             <input
-              class="input"
+              class="input "
               type="text"
               id="name"
               placeholder="Введите ваше имя"
+             
               required
             />
           </div>
@@ -1767,7 +790,7 @@
           </div>
           <div class="cls"></div>
           <div class="textarea-wrapper">
-            <label for="message" class="label bold">Сообщение</label>
+            <label for="message " class="label bold translate" data-ru="Сообщение" data-en="Message"  >Сообщение</label>
             <textarea
               class="textarea"
               name="message"
@@ -1777,11 +800,11 @@
               rows="10"
               required
             ></textarea>
-            <button type="submit" class="submit">Отправить</button>
+            <button type="submit" class="submit translate" data-ru="Отправить" data-en="Send">Отправить</button>
           </div>
         </form>
       </div>
-      <div class="form-result block-center">
+      <!-- <div class="form-result block-center">
         <div class="form-result__content">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
@@ -1790,12 +813,12 @@
             exercitationem odio ab saepe iure fugiat!
           </p>
         </div>
-      </div>
+      </div> -->
     </section>
     <footer class="footer section-gray">
       <ul class="socials">
         <li class="social-element">
-          <p>hdhd</p>
+         
           <a
             href="https://vk.com/mnnkuff__i"
             target="_blank"
@@ -1854,7 +877,8 @@
           </a>
         </li>
       </ul>
-      <p class="footer-about">&copy;&nbsp;Курилина &nbsp;Наталья 2005-2024</p>
+      <p class="footer-about translate" data-ru="Курилина Наталья 2005-2024" data-en="Kurilina Natali 2005-2024" >&copy;&nbsp;Курилина &nbsp;Наталья 2005-2024</p>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -19,6 +19,9 @@
 }
 
 /* общие стили */
+html {
+  scroll-behavior: smooth;
+}
 a.link {
   color: var(--color-green);
   text-decoration: none;
@@ -799,8 +802,12 @@ ul.about-me__exstra {
 
 .input-wrapper {
   width: 48%;
-}
+  
 
+}
+.interest-wrapper{
+  margin-bottom: 20px;
+}
 .input-wrapper.left {
   float: left;
 }
@@ -928,3 +935,19 @@ ul.about-me__exstra {
   display: none;
 }
 
+.skill-card {
+  display: none;
+}
+.skill-card.active {
+  display: block;
+}
+
+.skills-list__element.active {
+  border: 2px solid green;
+}
+
+
+
+
+
+/* перевод */
