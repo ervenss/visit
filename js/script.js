@@ -108,11 +108,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const skillElements = document.querySelectorAll('.skills-list__element');
     const skillCards = document.querySelectorAll('.skill-card');
 
-    // Display the first skill card by default
-    const defaultCard = document.getElementById('html-card');
-    if (defaultCard) {
-        defaultCard.classList.add('active');
-        highlightFirstSkillCard();
+    // Display the first skill card by default (only on larger screens)
+    if (window.innerWidth > 768) {
+        const defaultCard = document.getElementById('html-card');
+        if (defaultCard) {
+            defaultCard.classList.add('active');
+            highlightFirstSkillCard();
+        }
     }
 
     function showFirstVisibleSkillCard() {
@@ -159,20 +161,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     skillElements.forEach(skill => {
         skill.addEventListener('click', () => {
-            skillElements.forEach(el => el.classList.remove('active-outline'));
-            skill.classList.add('active-outline');
+            if (window.innerWidth <= 768) { // Only for mobile view
+                const skillName = skill.getAttribute('data-skill') + '-card';
+                const skillCard = document.getElementById(skillName);
 
-            const skillName = skill.getAttribute('data-skill') + '-card';
-            skillCards.forEach(card => {
-                if (card.id === skillName) {
-                    card.classList.add('active');
-                } else {
-                    card.classList.remove('active');
+                if (skillCard) {
+                    const isActive = skillCard.classList.contains('active');
+                    skillCards.forEach(card => card.classList.remove('active'));
+                    if (!isActive) {
+                        skillCard.classList.add('active');
+                        skill.parentNode.insertBefore(skillCard, skill.nextSibling);
+                    } else {
+                        skillCard.classList.remove('active');
+                    }
                 }
-            });
+            } else {
+                skillElements.forEach(el => el.classList.remove('active-outline'));
+                skill.classList.add('active-outline');
+
+                const skillName = skill.getAttribute('data-skill') + '-card';
+                skillCards.forEach(card => {
+                    if (card.id === skillName) {
+                        card.classList.add('active');
+                    } else {
+                        card.classList.remove('active');
+                    }
+                });
+            }
         });
     });
 });
+
 
 function toggleLanguage() {
     // Находим все элементы, которые нужно перевести

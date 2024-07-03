@@ -344,28 +344,54 @@
 
   /* Skills */
   .skills-wrapper .right {
-      display: none;
-  }
+    display: none;
+}
 
-  .skills-wrapper .left {
-      width: 100%;
-      max-width: 100%;
-      padding-right: 0;
-  }
+.skills-wrapper .left {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+}
 
-  .skills-list__row {
-      flex-direction: column;
-  }
+.skills-list__row {
+    flex-direction: column;
+}
 
-  .skills-list__element {
-      width: 100%;
-      max-width: 100%;
-  }
+.skills-list__element {
+    width: 100%;
+    max-width: 100%;
+}
 
-  .skills-list__element > *:first-child {
-      max-height: 90%;
-  }
+.skills-list__element > *:first-child {
+    max-height: 90%;
+}
 
+
+.skill-card {
+    display: none; /* Скрываем по умолчанию */
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000000;
+    width: 350px;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.skill-card.active {
+    display: block;
+}
+
+.skills-list__element {
+    position: relative;
+}
+
+.skill-card__progress-bar{
+    margin-right: 10px;
+}
+.skill-card__progress-percent{
+    margin-right: 10px;
+}
   /* Work */
   .work-wrapper {
       width: 95%;

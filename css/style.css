@@ -477,6 +477,7 @@ ul.about-me__exstra {
 .skill-card__image {
   width: 150px;
   flex: 1 1 30%;
+  
 }
 .skill-card__tittle {
   display: flex;
@@ -514,6 +515,9 @@ ul.about-me__exstra {
   padding-left: 20px;
   font-size: 24px;
   flex: 1 1 70%;
+  position: absolute;
+  margin-top: 30px;
+  
 }
 /*  */
 
@@ -945,6 +949,7 @@ ul.about-me__exstra {
 .skills-list__element.active {
   border: 2px solid green;
 }
+
 
 
 
